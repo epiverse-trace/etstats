@@ -20,7 +20,7 @@ if (file.exists(here::here("inst", "extdata", "traffic", "{{ visit }}.json"))) {
 
 ```{r merge-latest-history-{{ visit }}}
 all_{{ visit }} <- c(
-  setNames(list(latest_{{ visit }}), format(Sys.Date()+1)), 
+  setNames(list(latest_{{ visit }}), format(Sys.Date())), 
   history_{{ visit }}
 )
 ```

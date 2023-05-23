@@ -80,7 +80,7 @@ if (file.exists(here::here("inst", "extdata", "traffic", "referrals.json"))) {
 
 ```{r merge-latest-history-{{ visit }}}
 all_referrals <- c(
-  setNames(list(latest_referrals), format(Sys.Date()+1)), 
+  setNames(list(latest_referrals), format(Sys.Date())), 
   history_referrals
 )
 ```
