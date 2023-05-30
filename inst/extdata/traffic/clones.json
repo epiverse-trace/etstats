@@ -1,4 +1,146 @@
 {
+  "2023-05-30": [
+    {
+      "package": "bpmodels",
+      "count": 200,
+      "uniques": 18
+    },
+    {
+      "package": "datadelay",
+      "count": 97,
+      "uniques": 11
+    },
+    {
+      "package": "linelist",
+      "count": 49,
+      "uniques": 10
+    },
+    {
+      "package": "epiparameter",
+      "count": 10,
+      "uniques": 7
+    },
+    {
+      "package": "finalsize",
+      "count": 76,
+      "uniques": 16
+    },
+    {
+      "package": "blueprints",
+      "count": 13,
+      "uniques": 8
+    },
+    {
+      "package": "serofoi",
+      "count": 33,
+      "uniques": 10
+    },
+    {
+      "package": "readepi",
+      "count": 32,
+      "uniques": 9
+    },
+    {
+      "package": "sivirep",
+      "count": 37,
+      "uniques": 14
+    },
+    {
+      "package": "epiverse-trace.r-universe.dev",
+      "count": 25,
+      "uniques": 19
+    },
+    {
+      "package": "epiversedashboard",
+      "count": 6,
+      "uniques": 4
+    },
+    {
+      "package": "packagetemplate",
+      "count": 8,
+      "uniques": 6
+    },
+    {
+      "package": "episoap",
+      "count": 67,
+      "uniques": 16
+    },
+    {
+      "package": ".github",
+      "count": 10,
+      "uniques": 6
+    },
+    {
+      "package": "epiCo",
+      "count": 48,
+      "uniques": 6
+    },
+    {
+      "package": "superspreading",
+      "count": 442,
+      "uniques": 23
+    },
+    {
+      "package": "epiverse-trace.github.io",
+      "count": 21,
+      "uniques": 10
+    },
+    {
+      "package": "etdev",
+      "count": 5,
+      "uniques": 3
+    },
+    {
+      "package": "scenarios",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "package": "epidemics",
+      "count": 175,
+      "uniques": 6
+    },
+    {
+      "package": "quickfit",
+      "count": 158,
+      "uniques": 12
+    },
+    {
+      "package": "workflows",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "package": "cleanepi",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "package": "epiversetheme",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "package": "rmdscaffold",
+      "count": 3,
+      "uniques": 2
+    },
+    {
+      "package": "hex-stickers",
+      "count": 4,
+      "uniques": 3
+    },
+    {
+      "package": "epichains",
+      "count": 49,
+      "uniques": 8
+    },
+    {
+      "package": "etstats",
+      "count": 73,
+      "uniques": 22
+    }
+  ],
   "2023-05-24": [
     {
       "package": "bpmodels",
