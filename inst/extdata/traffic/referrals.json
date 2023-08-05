@@ -1,4 +1,565 @@
 {
+  "2023-08-05": [
+    {
+      "package": "bpmodels",
+      "2": {
+        "referrer": "github.com",
+        "count": 39,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 10,
+        "uniques": 4
+      },
+      "4": {
+        "referrer": "repidemicsconsortium.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "cfr",
+      "2": {
+        "referrer": "github.com",
+        "count": 15,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 5,
+        "uniques": 2
+      },
+      "4": {
+        "referrer": "epiverse-trace.r-universe.dev",
+        "count": 3,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "mail.google.com",
+        "count": 2,
+        "uniques": 1
+      },
+      "6": {
+        "referrer": "data.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "linelist",
+      "2": {
+        "referrer": "Google",
+        "count": 11,
+        "uniques": 6
+      },
+      "3": {
+        "referrer": "cran.r-project.org",
+        "count": 7,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiparameter",
+      "2": {
+        "referrer": "Google",
+        "count": 42,
+        "uniques": 9
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 27,
+        "uniques": 5
+      },
+      "4": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 24,
+        "uniques": 5
+      },
+      "5": {
+        "referrer": "worldhealthorganization.github.io",
+        "count": 3,
+        "uniques": 3
+      },
+      "6": {
+        "referrer": "Bing",
+        "count": 1,
+        "uniques": 1
+      },
+      "7": {
+        "referrer": "data.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "finalsize",
+      "2": {
+        "referrer": "github.com",
+        "count": 29,
+        "uniques": 7
+      },
+      "3": {
+        "referrer": "DuckDuckGo",
+        "count": 7,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 1,
+        "uniques": 1
+      },
+      "6": {
+        "referrer": "com.google.android.gm",
+        "count": 1,
+        "uniques": 1
+      },
+      "7": {
+        "referrer": "data.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "blueprints",
+      "2": {
+        "referrer": "github.com",
+        "count": 3,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "serofoi",
+      "2": {
+        "referrer": "Google",
+        "count": 13,
+        "uniques": 6
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 10,
+        "uniques": 3
+      },
+      "4": {
+        "referrer": "com.google.android.gm",
+        "count": 5,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "t.co",
+        "count": 4,
+        "uniques": 4
+      }
+    },
+    {
+      "package": "vaccineff",
+      "2": {
+        "referrer": "github.com",
+        "count": 4,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "data.org",
+        "count": 2,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "kucharski.shinyapps.io",
+        "count": 1,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      },
+      "6": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "readepi",
+      "2": {
+        "referrer": "github.com",
+        "count": 4,
+        "uniques": 4
+      },
+      "3": {
+        "referrer": "mail.google.com",
+        "count": 2,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "epiverse-trace.r-universe.dev",
+        "count": 2,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      },
+      "6": {
+        "referrer": "data.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "sivirep",
+      "2": {
+        "referrer": "Google",
+        "count": 36,
+        "uniques": 12
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 28,
+        "uniques": 10
+      },
+      "4": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 5,
+        "uniques": 2
+      },
+      "5": {
+        "referrer": "t.co",
+        "count": 3,
+        "uniques": 2
+      },
+      "6": {
+        "referrer": "epiverse-trace.r-universe.dev",
+        "count": 3,
+        "uniques": 2
+      },
+      "7": {
+        "referrer": "data.org",
+        "count": 3,
+        "uniques": 1
+      },
+      "8": {
+        "referrer": "Bing",
+        "count": 1,
+        "uniques": 1
+      },
+      "9": {
+        "referrer": "canva.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiverse-trace.r-universe.dev",
+      "2": {
+        "referrer": "github.com",
+        "count": 2,
+        "uniques": 2
+      },
+      "3": {
+        "referrer": "medicina.javeriana.edu.co",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiversedashboard"
+    },
+    {
+      "package": "packagetemplate",
+      "2": {
+        "referrer": "github.com",
+        "count": 8,
+        "uniques": 4
+      }
+    },
+    {
+      "package": "episoap",
+      "2": {
+        "referrer": "github.com",
+        "count": 32,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 5,
+        "uniques": 2
+      },
+      "4": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 1,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "epiverse-trace.r-universe.dev",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": ".github",
+      "2": {
+        "referrer": "mail.google.com",
+        "count": 15,
+        "uniques": 1
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 15,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiCo",
+      "2": {
+        "referrer": "github.com",
+        "count": 109,
+        "uniques": 8
+      },
+      "3": {
+        "referrer": "epiverse-trace.r-universe.dev",
+        "count": 37,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "Google",
+        "count": 28,
+        "uniques": 3
+      },
+      "5": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 3,
+        "uniques": 1
+      },
+      "6": {
+        "referrer": "medicina.javeriana.edu.co",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "superspreading",
+      "2": {
+        "referrer": "github.com",
+        "count": 35,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 4,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiverse-trace.github.io",
+      "2": {
+        "referrer": "github.com",
+        "count": 64,
+        "uniques": 10
+      },
+      "3": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 18,
+        "uniques": 4
+      },
+      "4": {
+        "referrer": "mail.google.com",
+        "count": 9,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "t.co",
+        "count": 4,
+        "uniques": 1
+      },
+      "6": {
+        "referrer": "Google",
+        "count": 2,
+        "uniques": 2
+      }
+    },
+    {
+      "package": "etdev",
+      "2": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "scenarios",
+      "2": {
+        "referrer": "Google",
+        "count": 6,
+        "uniques": 1
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epidemics",
+      "2": {
+        "referrer": "github.com",
+        "count": 62,
+        "uniques": 8
+      },
+      "3": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 16,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "Google",
+        "count": 3,
+        "uniques": 2
+      },
+      "5": {
+        "referrer": "mail.google.com",
+        "count": 3,
+        "uniques": 1
+      },
+      "6": {
+        "referrer": "cn.bing.com",
+        "count": 1,
+        "uniques": 1
+      },
+      "7": {
+        "referrer": "kucharski.shinyapps.io",
+        "count": 1,
+        "uniques": 1
+      },
+      "8": {
+        "referrer": "data.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "quickfit",
+      "2": {
+        "referrer": "github.com",
+        "count": 4,
+        "uniques": 2
+      }
+    },
+    {
+      "package": "cleanepi",
+      "2": {
+        "referrer": "Google",
+        "count": 32,
+        "uniques": 2
+      },
+      "3": {
+        "referrer": "DuckDuckGo",
+        "count": 19,
+        "uniques": 2
+      },
+      "4": {
+        "referrer": "github.com",
+        "count": 15,
+        "uniques": 3
+      },
+      "5": {
+        "referrer": "data.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiversetheme",
+      "2": {
+        "referrer": "data.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "rmdscaffold",
+      "2": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "hex-stickers",
+      "2": {
+        "referrer": "github.com",
+        "count": 3,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epichains",
+      "2": {
+        "referrer": "github.com",
+        "count": 8,
+        "uniques": 4
+      }
+    },
+    {
+      "package": "lessons"
+    },
+    {
+      "package": "personas"
+    },
+    {
+      "package": "etstats"
+    },
+    {
+      "package": "howto",
+      "2": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 10,
+        "uniques": 1
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "iraca",
+      "2": {
+        "referrer": "github.com",
+        "count": 48,
+        "uniques": 5
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "medicina.javeriana.edu.co",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "llm-guidance",
+      "2": {
+        "referrer": "github.com",
+        "count": 3,
+        "uniques": 3
+      }
+    }
+  ],
   "2023-08-04": [
     {
       "package": "bpmodels",
