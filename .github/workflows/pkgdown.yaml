@@ -9,8 +9,7 @@ on:
     types: [published]
   workflow_dispatch:
   schedule:
-    # https://stackoverflow.com/a/68191811/4439357
-    - cron: '42 1 1-7,15-21 * 2'
+    - cron: '42 1 * * 2'
 
 name: pkgdown
 
