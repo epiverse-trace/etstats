@@ -1,4 +1,186 @@
 {
+  "2023-09-12": [
+    {
+      "package": "bpmodels",
+      "count": 201,
+      "uniques": 16
+    },
+    {
+      "package": "cfr",
+      "count": 143,
+      "uniques": 8
+    },
+    {
+      "package": "linelist",
+      "count": 49,
+      "uniques": 7
+    },
+    {
+      "package": "epiparameter",
+      "count": 1016,
+      "uniques": 39
+    },
+    {
+      "package": "finalsize",
+      "count": 70,
+      "uniques": 12
+    },
+    {
+      "package": "blueprints",
+      "count": 17,
+      "uniques": 4
+    },
+    {
+      "package": "serofoi",
+      "count": 351,
+      "uniques": 14
+    },
+    {
+      "package": "vaccineff",
+      "count": 144,
+      "uniques": 9
+    },
+    {
+      "package": "readepi",
+      "count": 475,
+      "uniques": 10
+    },
+    {
+      "package": "sivirep",
+      "count": 60,
+      "uniques": 15
+    },
+    {
+      "package": "epiverse-trace.r-universe.dev",
+      "count": 24,
+      "uniques": 2
+    },
+    {
+      "package": "epiversedashboard",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "packagetemplate",
+      "count": 327,
+      "uniques": 6
+    },
+    {
+      "package": "episoap",
+      "count": 18,
+      "uniques": 3
+    },
+    {
+      "package": ".github",
+      "count": 78,
+      "uniques": 21
+    },
+    {
+      "package": "epiCo",
+      "count": 276,
+      "uniques": 27
+    },
+    {
+      "package": "superspreading",
+      "count": 66,
+      "uniques": 5
+    },
+    {
+      "package": "epiverse-trace.github.io",
+      "count": 152,
+      "uniques": 30
+    },
+    {
+      "package": "etdev",
+      "count": 7,
+      "uniques": 1
+    },
+    {
+      "package": "scenarios",
+      "count": 14,
+      "uniques": 3
+    },
+    {
+      "package": "epidemics",
+      "count": 328,
+      "uniques": 19
+    },
+    {
+      "package": "quickfit",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "cleanepi",
+      "count": 52,
+      "uniques": 10
+    },
+    {
+      "package": "epiversetheme",
+      "count": 9,
+      "uniques": 2
+    },
+    {
+      "package": "rmdscaffold",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "hex-stickers",
+      "count": 17,
+      "uniques": 1
+    },
+    {
+      "package": "epichains",
+      "count": 145,
+      "uniques": 14
+    },
+    {
+      "package": "lessons",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "personas",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "etstats",
+      "count": 3,
+      "uniques": 1
+    },
+    {
+      "package": "epi-training-kit",
+      "count": 15,
+      "uniques": 7
+    },
+    {
+      "package": "howto",
+      "count": 13,
+      "uniques": 3
+    },
+    {
+      "package": "iraca",
+      "count": 37,
+      "uniques": 16
+    },
+    {
+      "package": "llm-guidance",
+      "count": 4,
+      "uniques": 2
+    },
+    {
+      "package": "research-compendium",
+      "count": 502,
+      "uniques": 27
+    },
+    {
+      "package": "simulist",
+      "count": 10,
+      "uniques": 3
+    }
+  ],
   "2023-09-05": [
     {
       "package": "bpmodels",
