@@ -1,0 +1,54 @@
+---
+title: "CRAN statistics"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CRAN statistics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+et_cran_pkgs <- "https://epiverse-trace.r-universe.dev/api/packages/" |> 
+  jsonlite::fromJSON() |>
+  dplyr::filter(
+    `_registered`,
+    `_cranurl`
+    ) |> 
+  dplyr::pull(Package)
+```
+
+```{r}
+et_cran_pkgs_string <- glue::glue_collapse(et_cran_pkgs, sep = ",")
+yesterday <- Sys.Date() - 1
+```
+
+```{r}
+et_cran_stats <- "https://cranlogs.r-pkg.org/downloads/daily/2022-05-13:{yesterday}/{et_cran_pkgs_string}" |> 
+  glue::glue() |> 
+  jsonlite::fromJSON() |> 
+  dplyr::select(-start, -end) |> 
+  tidyr::unnest(downloads)
+```
+
+```{r}
+library(ggplot2)
+theme_set(theme_minimal())
+
+et_cran_stats |> 
+  dplyr::mutate(`Cumulative downloads` = cumsum(downloads), .by = package) |> 
+  dplyr::mutate(day = as.Date(day)) |>
+  ggplot(aes(x = day, y = `Cumulative downloads`, color = package)) +
+    geom_line() +
+    labs(
+      title = "Cumulative downloads of Epiverse-TRACE on CRAN",
+      subtitle = "Data from RStudio CRAN mirror, via cranlogs.r-pkg.org"
+    ) +
+    scale_colour_viridis_d(option = "turbo")
+```

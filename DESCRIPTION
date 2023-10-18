@@ -16,8 +16,11 @@ Imports:
     forcats,
     ggplot2,
     gh,
+    glue,
     here,
     jsonlite,
     knitr,
     purrr,
-    rmarkdown
+    rmarkdown,
+    tidyr
+VignetteBuilder: knitr
