@@ -10,6 +10,7 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
+  echo = FALSE,
   comment = "#>"
 )
 ```
@@ -22,6 +23,12 @@ et_cran_pkgs <- "https://epiverse-trace.r-universe.dev/api/packages/" |>
     `_cranurl`
     ) |> 
   dplyr::pull(Package)
+```
+
+We currently have `r length(et_cran_pkgs)` Epiverse-TRACE packages on CRAN: 
+
+```{r, results='asis'}
+cat(paste("-", et_cran_pkgs), sep = "\n")
 ```
 
 ```{r}
@@ -37,7 +44,11 @@ et_cran_stats <- "https://cranlogs.r-pkg.org/downloads/daily/2022-05-13:{yesterd
   tidyr::unnest(downloads)
 ```
 
-```{r}
+In total, Epiverse-TRACE packages on CRAN has been downloaded `r sum(et_cran_stats$downloads)` times.
+
+Below is a visualization of the breakdown of this grand total by package over time.
+
+```{r, fig.alt=glue::glue("Cumulative downloads of Epiverse-TRACE on CRAN ({toString(et_cran_pkgs)})")}
 library(ggplot2)
 theme_set(theme_minimal())
 
