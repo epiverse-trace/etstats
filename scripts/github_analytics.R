@@ -6,6 +6,36 @@ library(ggplot2)
 ## -------------------------------------------------------------------------------------------------------------------------------------------------------------
 org <- "epiverse-trace"
 
+update_visit_data <- function(repos, visit) {
+
+  latest <- repos |>
+    purrr::map(function(repo) {
+      c(
+        package = basename(repo),
+        gh::gh("/repos/{repo}/traffic/{visit}", repo = repo, visit = visit)[c("count", "uniques")]
+      )
+    })
+
+  data_file <- here::here("inst", "extdata", "traffic", paste0(visit, ".json"))
+
+  if (file.exists(data_file)) {
+    history <- jsonlite::read_json(data_file)
+  } else {
+    history <- NULL
+  }
+
+  all <- c(
+    setNames(list(latest), format(Sys.Date())),
+    history
+  )
+
+  jsonlite::write_json(
+    all,
+    data_file,
+    pretty = TRUE,
+    auto_unbox = TRUE
+  )
+}
 
 ## -------------------------------------------------------------------------------------------------------------------------------------------------------------
 repos <- gh::gh(
@@ -15,6 +45,11 @@ repos <- gh::gh(
 ) |>
   purrr::discard(\(x) x$private) |>
   purrr::map_chr("full_name")
+
+
+update_visit_data(repos, visit = "views")
+
+update_visit_data(repos, visit = "clones")
 
 ## -------------------------------------------------------------------------------------------------------------------------------------------------------------
 latest_referrals <- repos |>
