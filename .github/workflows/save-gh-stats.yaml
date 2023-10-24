@@ -34,6 +34,9 @@ jobs:
         with:
           extra-packages: local::.
 
+      - name: Gather data
+        run: Rscript scripts/github_analytics.R
+
       - name: Save data
         if: github.event_name != 'pull_request'
         run: |
