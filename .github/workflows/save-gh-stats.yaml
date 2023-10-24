@@ -35,6 +35,8 @@ jobs:
           extra-packages: local::.
 
       - name: Gather data
+        env:
+          GITHUB_PAT: ${{ secrets.ET_TOKEN }}
         run: Rscript scripts/github_analytics.R
 
       - name: Save data
