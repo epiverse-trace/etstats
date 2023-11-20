@@ -24,3 +24,4 @@ Imports:
     rmarkdown,
     tidyr
 VignetteBuilder: knitr
+Config/Needs/website: epiverse-trace/epiversetheme
