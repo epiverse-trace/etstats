@@ -45,7 +45,7 @@ et_cran_stats <- "https://cranlogs.r-pkg.org/downloads/daily/2022-05-13:{yesterd
   tidyr::unnest(downloads)
 ```
 
-In total, Epiverse-TRACE packages on CRAN has been downloaded `r sum(et_cran_stats$downloads)` times.
+In total, Epiverse-TRACE packages on CRAN have been downloaded `r sum(et_cran_stats$downloads)` times.
 
 Below is a visualization of the breakdown of this grand total by package over time.
 
