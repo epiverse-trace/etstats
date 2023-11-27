@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://epiverse-trace.github.io/etstats/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://epiverse-trace.github.io/etstats/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/articles/cran-statistics.html</loc>
+    <loc>https://epiverse-trace.github.io/etstats/articles/cran-statistics.html</loc>
   </url>
   <url>
-    <loc>/articles/index.html</loc>
+    <loc>https://epiverse-trace.github.io/etstats/articles/index.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://epiverse-trace.github.io/etstats/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://epiverse-trace.github.io/etstats/index.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://epiverse-trace.github.io/etstats/reference/index.html</loc>
   </url>
 </urlset>
