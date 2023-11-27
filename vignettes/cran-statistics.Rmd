@@ -29,7 +29,7 @@ et_cran_pkgs <- "https://epiverse-trace.r-universe.dev/api/packages/" |>
 We currently have `r length(et_cran_pkgs)` Epiverse-TRACE packages on CRAN: 
 
 ```{r, results='asis'}
-cat(paste("-", et_cran_pkgs), sep = "\n")
+cat(paste0("- [", et_cran_pkgs, "](https://cran.r-project.org/package=", et_cran_pkgs, ")"), sep = "\n")
 ```
 
 ```{r}
