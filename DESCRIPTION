@@ -25,3 +25,5 @@ Imports:
     tidyr
 VignetteBuilder: knitr
 Config/Needs/website: epiverse-trace/epiversetheme
+URL: https://github.com/epiverse-trace/etstats
+BugReports: https://github.com/epiverse-trace/etstats/issues
