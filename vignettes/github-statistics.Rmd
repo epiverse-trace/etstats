@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-## GitHub stars :star:
+## GitHub stars ⭐
 
 ```{r}
 et_pkgs <- gh::gh("/orgs/{org}/repos", org = "epiverse-trace") |> 
