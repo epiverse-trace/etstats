@@ -1,0 +1,49 @@
+---
+title: "Citations"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Citations}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>"
+)
+```
+
+## Citations of Epiverse as a project
+
+```{r, results='asis'}
+b <- tools::bibstyle(
+  "by_year", 
+  fmtPrefix = function(paper) "-", 
+  .init = TRUE, 
+  sortKeys = function(refs) rank(purrr::map_chr(unclass(refs), "year"))
+)
+
+system.file("extdata", "citations", "epiverse.bib", package = "etstats") |>
+  bibtex::read.bib() |>
+  purrr::keep(~ attr(unclass(.x), "bibtype") == "Article") |>
+  sort(.bibstyle = "by_year", decreasing = TRUE) |>
+  format("html", .bibstyle = "by_year") |>
+  paste(collapse = "") |>
+  cat()
+```
+
+## Package citations
+
+```{r, results='asis'}
+# Loop over files in inst/extdata/citations
+system.file("extdata", "citations", package = "etstats") |>
+  list.files(full.names = TRUE) |> 
+  setdiff(system.file("extdata", "citations", "epiverse.bib", package = "etstats")) |> 
+  purrr::map_chr(~ knitr::knit_expand(file = "_pkg_citations.Rmd", bibfile = .x)) |> 
+  knitr::knit(text = _, quiet = TRUE) |>
+  cat()
+```

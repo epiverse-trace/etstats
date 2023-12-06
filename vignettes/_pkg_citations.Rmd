@@ -1,0 +1,13 @@
+```{r, echo = FALSE}
+pkgname <- basename(tools::file_path_sans_ext("{{bibfile}}"))
+```
+
+### `r pkgname`
+
+```{r, results='asis'}
+bibtex::read.bib("{{bibfile}}") |>
+  purrr::keep(~ attr(unclass(.x), "bibtype") == "Article") |> 
+  format("html", .bibstyle = "by_year") |>
+  paste(collapse = "") |>
+  cat()
+```
