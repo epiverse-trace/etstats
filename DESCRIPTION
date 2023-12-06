@@ -18,6 +18,7 @@ Imports:
     gh,
     glue,
     here,
+    janitor,
     jsonlite,
     knitr,
     purrr,

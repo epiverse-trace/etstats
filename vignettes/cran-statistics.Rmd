@@ -64,3 +64,15 @@ et_cran_stats |>
     ) +
     scale_colour_viridis_d(option = "turbo")
 ```
+
+```{r}
+# Break down by year in a table
+et_cran_stats |> 
+  dplyr::mutate(year = lubridate::year(day)) |> 
+  dplyr::group_by(year, package) |> 
+  dplyr::summarize(downloads = sum(downloads)) |> 
+  tidyr::pivot_wider(names_from = year, values_from = downloads) |> 
+  janitor::adorn_totals("row") |>
+  knitr::kable()
+```
+
