@@ -48,7 +48,7 @@ et_pkgs_stargazers |>
   ggplot(aes(x = stars, y = repository)) +
     geom_col() +
     labs(
-      title = "GitHub stars for Epiverse-TRACE repositorys",
+      title = "GitHub stars for Epiverse-TRACE repositories",
     ) +
     NULL
 ```
