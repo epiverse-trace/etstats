@@ -1,0 +1,52 @@
+---
+title: "GitHub statistics"
+output: rmarkdown::html_vignette
+date: "`r Sys.Date()`"
+vignette: >
+  %\VignetteIndexEntry{GitHub statistics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  echo = FALSE,
+  comment = "#>"
+)
+```
+
+## GitHub stars :star:
+
+```{r}
+et_pkgs <- gh::gh("/orgs/{org}/repos", org = "epiverse-trace") |> 
+  purrr::map_chr("full_name")
+```
+
+```{r}
+et_pkgs_stargazers <- et_pkgs |> 
+  purrr::set_names() |> 
+  purrr::map(~ gh::gh("/repos/{pkg}/stargazers", pkg = .x)) |> 
+  purrr::map(~ purrr::map_chr(.x, "login"))
+```
+
+In total, we have `r sum(lengths(et_pkgs_stargazers))` stars across all Epiverse-TRACE packages. These stars come from `r length(unique(unlist(et_pkgs_stargazers)))` unique users.
+
+```{r}
+library(ggplot2)
+theme_set(theme_minimal())
+
+et_pkgs_stargazers |> 
+  lengths() |> 
+  tibble::enframe(name = "repository", value = "stars") |> 
+  dplyr::mutate(
+    repository = stringr::str_remove(repository, "epiverse-trace/"),
+    repository = forcats::fct_reorder(repository, stars)
+  ) |>
+  ggplot(aes(x = stars, y = repository)) +
+    geom_col() +
+    labs(
+      title = "GitHub stars for Epiverse-TRACE repositorys",
+    ) +
+    NULL
+```
