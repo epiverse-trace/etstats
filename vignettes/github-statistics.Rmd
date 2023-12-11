@@ -28,27 +28,78 @@ et_pkgs <- gh::gh("/orgs/{org}/repos", org = "epiverse-trace") |>
 ```{r}
 et_pkgs_stargazers <- et_pkgs |> 
   purrr::set_names() |> 
-  purrr::map(~ gh::gh("/repos/{pkg}/stargazers", pkg = .x)) |> 
-  purrr::map(~ purrr::map_chr(.x, "login"))
+  purrr::map(function(repo) {
+    api_resp <- gh::gh(
+      "/repos/{repo}/stargazers", 
+      repo = repo, 
+      .accept = "application/vnd.github.star+json"
+    )
+    res <- as.data.frame(cbind(
+      stringr::str_remove(repo, "epiverse-trace/"),
+      purrr::map_chr(api_resp, "starred_at"),
+      purrr::map_chr(api_resp, c("user", "login"))
+    ))
+    return(res)
+  }) |> 
+  dplyr::bind_rows() |> 
+  tidyr::drop_na() |> 
+  purrr::set_names(c("repository", "date", "user")) |> 
+  dplyr::mutate(date = lubridate::ymd_hms(date))
 ```
 
-In total, we have `r sum(lengths(et_pkgs_stargazers))` stars across all Epiverse-TRACE packages. These stars come from `r length(unique(unlist(et_pkgs_stargazers)))` unique users.
+### Totals
+
+In total, we have `r nrow(et_pkgs_stargazers)` stars across all Epiverse-TRACE packages. These stars come from `r dplyr::n_distinct(et_pkgs_stargazers$user)` unique users.
 
 ```{r}
 library(ggplot2)
 theme_set(theme_minimal())
 
 et_pkgs_stargazers |> 
-  lengths() |> 
-  tibble::enframe(name = "repository", value = "stars") |> 
-  dplyr::mutate(
-    repository = stringr::str_remove(repository, "epiverse-trace/"),
-    repository = forcats::fct_reorder(repository, stars)
-  ) |>
-  ggplot(aes(x = stars, y = repository)) +
+  dplyr::count(repository) |>
+  dplyr::mutate(repository = forcats::fct_reorder(repository, n)) |>
+  ggplot(aes(x = n, y = repository)) +
     geom_col() +
     labs(
-      title = "GitHub stars for Epiverse-TRACE repositories",
+      title = "GitHub stars per repository",
+      x = "Number of stars",
+      y = "Repository"
     ) +
     NULL
+```
+
+### Over time
+
+```{r}
+et_pkgs_stargazers |> 
+  dplyr::group_by(repository) |> 
+  dplyr::mutate(
+    `Cumulative stars` = seq_len(dplyr::n())
+  ) |> 
+  dplyr::ungroup() |> 
+  dplyr::mutate(
+    repository = forcats::fct_infreq(repository)
+  ) |> 
+  dplyr::filter(
+    lubridate::year(date) >= 2022
+  ) |>
+  ggplot(aes(x = date, y = `Cumulative stars`, col = repository)) +
+    geom_line() +
+    labs(
+      x = "Date",
+      color = "Repository",
+      title = "GitHub stars for Epiverse-TRACE repositories over time",
+    ) +
+    NULL
+```
+
+```{r}
+# Break down by year in a table
+et_pkgs_stargazers |> 
+  dplyr::mutate(year = lubridate::year(date)) |> 
+  dplyr::filter(year >= 2022) |> 
+  dplyr::count(year, repository, name = "stars") |>
+  tidyr::pivot_wider(names_from = year, values_from = stars, values_fill = 0L) |> 
+  janitor::adorn_totals("row") |>
+  knitr::kable()
 ```
