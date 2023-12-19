@@ -1,4 +1,236 @@
 {
+  "2023-12-19": [
+    {
+      "package": "bpmodels",
+      "count": 6,
+      "uniques": 6
+    },
+    {
+      "package": "cfr",
+      "count": 58,
+      "uniques": 21
+    },
+    {
+      "package": "linelist",
+      "count": 169,
+      "uniques": 29
+    },
+    {
+      "package": "epiparameter",
+      "count": 102,
+      "uniques": 23
+    },
+    {
+      "package": "finalsize",
+      "count": 98,
+      "uniques": 22
+    },
+    {
+      "package": "blueprints",
+      "count": 11,
+      "uniques": 9
+    },
+    {
+      "package": "serofoi",
+      "count": 133,
+      "uniques": 17
+    },
+    {
+      "package": "vaccineff",
+      "count": 7,
+      "uniques": 6
+    },
+    {
+      "package": "readepi",
+      "count": 32,
+      "uniques": 8
+    },
+    {
+      "package": "sivirep",
+      "count": 56,
+      "uniques": 18
+    },
+    {
+      "package": "epiverse-trace.r-universe.dev",
+      "count": 21,
+      "uniques": 20
+    },
+    {
+      "package": "epiversedashboard",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "packagetemplate",
+      "count": 99,
+      "uniques": 18
+    },
+    {
+      "package": "episoap",
+      "count": 127,
+      "uniques": 24
+    },
+    {
+      "package": ".github",
+      "count": 6,
+      "uniques": 5
+    },
+    {
+      "package": "epiCo",
+      "count": 30,
+      "uniques": 12
+    },
+    {
+      "package": "superspreading",
+      "count": 338,
+      "uniques": 63
+    },
+    {
+      "package": "epiverse-trace.github.io",
+      "count": 81,
+      "uniques": 17
+    },
+    {
+      "package": "etdev",
+      "count": 4,
+      "uniques": 3
+    },
+    {
+      "package": "scenarios",
+      "count": 27,
+      "uniques": 11
+    },
+    {
+      "package": "epidemics",
+      "count": 144,
+      "uniques": 22
+    },
+    {
+      "package": "quickfit",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "cleanepi",
+      "count": 111,
+      "uniques": 13
+    },
+    {
+      "package": "epiversetheme",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "rmdscaffold",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "hex-stickers",
+      "count": 32,
+      "uniques": 17
+    },
+    {
+      "package": "epichains",
+      "count": 168,
+      "uniques": 18
+    },
+    {
+      "package": "lessons",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "personas",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "etstats",
+      "count": 68,
+      "uniques": 26
+    },
+    {
+      "package": "epi-training-kit",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "howto",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "iraca",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "llm-guidance",
+      "count": 6,
+      "uniques": 6
+    },
+    {
+      "package": "tutorials",
+      "count": 81,
+      "uniques": 18
+    },
+    {
+      "package": "research-compendium",
+      "count": 67,
+      "uniques": 21
+    },
+    {
+      "package": "simulist",
+      "count": 34,
+      "uniques": 13
+    },
+    {
+      "package": "ColOpenData",
+      "count": 5,
+      "uniques": 5
+    },
+    {
+      "package": "epishiny",
+      "count": 4,
+      "uniques": 2
+    },
+    {
+      "package": "git-rstudio-basics",
+      "count": 15,
+      "uniques": 4
+    },
+    {
+      "package": "numberize",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "package": "varnish",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "epimodelac",
+      "count": 120,
+      "uniques": 27
+    },
+    {
+      "package": "testpkg",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "sandpaper",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "epiverse",
+      "count": 65,
+      "uniques": 11
+    }
+  ],
   "2023-12-12": [
     {
       "package": "bpmodels",
