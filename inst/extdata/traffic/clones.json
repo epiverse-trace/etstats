@@ -1,4 +1,236 @@
 {
+  "2024-01-16": [
+    {
+      "package": "bpmodels",
+      "count": 10,
+      "uniques": 10
+    },
+    {
+      "package": "cfr",
+      "count": 15,
+      "uniques": 12
+    },
+    {
+      "package": "linelist",
+      "count": 18,
+      "uniques": 13
+    },
+    {
+      "package": "epiparameter",
+      "count": 13,
+      "uniques": 10
+    },
+    {
+      "package": "finalsize",
+      "count": 20,
+      "uniques": 11
+    },
+    {
+      "package": "blueprints",
+      "count": 51,
+      "uniques": 15
+    },
+    {
+      "package": "serofoi",
+      "count": 18,
+      "uniques": 11
+    },
+    {
+      "package": "vaccineff",
+      "count": 7,
+      "uniques": 6
+    },
+    {
+      "package": "readepi",
+      "count": 16,
+      "uniques": 7
+    },
+    {
+      "package": "sivirep",
+      "count": 18,
+      "uniques": 9
+    },
+    {
+      "package": "epiverse-trace.r-universe.dev",
+      "count": 20,
+      "uniques": 17
+    },
+    {
+      "package": "epiversedashboard",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "packagetemplate",
+      "count": 29,
+      "uniques": 12
+    },
+    {
+      "package": "episoap",
+      "count": 18,
+      "uniques": 11
+    },
+    {
+      "package": ".github",
+      "count": 6,
+      "uniques": 6
+    },
+    {
+      "package": "epiCo",
+      "count": 5,
+      "uniques": 5
+    },
+    {
+      "package": "superspreading",
+      "count": 138,
+      "uniques": 22
+    },
+    {
+      "package": "epiverse-trace.github.io",
+      "count": 59,
+      "uniques": 17
+    },
+    {
+      "package": "etdev",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "scenarios",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "epidemics",
+      "count": 23,
+      "uniques": 6
+    },
+    {
+      "package": "quickfit",
+      "count": 5,
+      "uniques": 5
+    },
+    {
+      "package": "cleanepi",
+      "count": 13,
+      "uniques": 6
+    },
+    {
+      "package": "epiversetheme",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "rmdscaffold",
+      "count": 7,
+      "uniques": 7
+    },
+    {
+      "package": "hex-stickers",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "epichains",
+      "count": 23,
+      "uniques": 8
+    },
+    {
+      "package": "lessons",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "personas",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "etstats",
+      "count": 16,
+      "uniques": 11
+    },
+    {
+      "package": "epi-training-kit",
+      "count": 10,
+      "uniques": 10
+    },
+    {
+      "package": "howto",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "iraca",
+      "count": 6,
+      "uniques": 6
+    },
+    {
+      "package": "llm-guidance",
+      "count": 21,
+      "uniques": 14
+    },
+    {
+      "package": "tutorials",
+      "count": 11,
+      "uniques": 7
+    },
+    {
+      "package": "research-compendium",
+      "count": 9,
+      "uniques": 6
+    },
+    {
+      "package": "simulist",
+      "count": 471,
+      "uniques": 70
+    },
+    {
+      "package": "ColOpenData",
+      "count": 22,
+      "uniques": 6
+    },
+    {
+      "package": "epishiny",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "git-rstudio-basics",
+      "count": 6,
+      "uniques": 4
+    },
+    {
+      "package": "numberize",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "varnish",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "epimodelac",
+      "count": 12,
+      "uniques": 8
+    },
+    {
+      "package": "testpkg",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "sandpaper",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "epiverse",
+      "count": 14,
+      "uniques": 8
+    }
+  ],
   "2024-01-09": [
     {
       "package": "bpmodels",
