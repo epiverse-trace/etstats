@@ -1,4 +1,236 @@
 {
+  "2024-01-23": [
+    {
+      "package": "bpmodels",
+      "count": 7,
+      "uniques": 7
+    },
+    {
+      "package": "cfr",
+      "count": 22,
+      "uniques": 18
+    },
+    {
+      "package": "linelist",
+      "count": 20,
+      "uniques": 15
+    },
+    {
+      "package": "epiparameter",
+      "count": 61,
+      "uniques": 23
+    },
+    {
+      "package": "finalsize",
+      "count": 67,
+      "uniques": 23
+    },
+    {
+      "package": "blueprints",
+      "count": 73,
+      "uniques": 26
+    },
+    {
+      "package": "serofoi",
+      "count": 41,
+      "uniques": 10
+    },
+    {
+      "package": "vaccineff",
+      "count": 8,
+      "uniques": 7
+    },
+    {
+      "package": "readepi",
+      "count": 28,
+      "uniques": 16
+    },
+    {
+      "package": "sivirep",
+      "count": 16,
+      "uniques": 9
+    },
+    {
+      "package": "epiverse-trace.r-universe.dev",
+      "count": 22,
+      "uniques": 22
+    },
+    {
+      "package": "epiversedashboard",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "packagetemplate",
+      "count": 34,
+      "uniques": 17
+    },
+    {
+      "package": "episoap",
+      "count": 16,
+      "uniques": 10
+    },
+    {
+      "package": ".github",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "epiCo",
+      "count": 7,
+      "uniques": 7
+    },
+    {
+      "package": "superspreading",
+      "count": 182,
+      "uniques": 47
+    },
+    {
+      "package": "epiverse-trace.github.io",
+      "count": 60,
+      "uniques": 17
+    },
+    {
+      "package": "etdev",
+      "count": 23,
+      "uniques": 9
+    },
+    {
+      "package": "scenarios",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "epidemics",
+      "count": 98,
+      "uniques": 22
+    },
+    {
+      "package": "quickfit",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "cleanepi",
+      "count": 107,
+      "uniques": 17
+    },
+    {
+      "package": "epiversetheme",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "rmdscaffold",
+      "count": 5,
+      "uniques": 5
+    },
+    {
+      "package": "hex-stickers",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "epichains",
+      "count": 127,
+      "uniques": 19
+    },
+    {
+      "package": "lessons",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "personas",
+      "count": 12,
+      "uniques": 10
+    },
+    {
+      "package": "etstats",
+      "count": 13,
+      "uniques": 9
+    },
+    {
+      "package": "epi-training-kit",
+      "count": 7,
+      "uniques": 7
+    },
+    {
+      "package": "howto",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "iraca",
+      "count": 6,
+      "uniques": 6
+    },
+    {
+      "package": "llm-guidance",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "tutorials",
+      "count": 34,
+      "uniques": 9
+    },
+    {
+      "package": "research-compendium",
+      "count": 9,
+      "uniques": 6
+    },
+    {
+      "package": "simulist",
+      "count": 102,
+      "uniques": 22
+    },
+    {
+      "package": "ColOpenData",
+      "count": 29,
+      "uniques": 10
+    },
+    {
+      "package": "epishiny",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "git-rstudio-basics",
+      "count": 5,
+      "uniques": 3
+    },
+    {
+      "package": "numberize",
+      "count": 5,
+      "uniques": 3
+    },
+    {
+      "package": "varnish",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "epimodelac",
+      "count": 14,
+      "uniques": 9
+    },
+    {
+      "package": "testpkg",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "sandpaper",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "epiverse",
+      "count": 6,
+      "uniques": 4
+    }
+  ],
   "2024-01-16": [
     {
       "package": "bpmodels",
