@@ -18,6 +18,15 @@ knitr::opts_chunk$set(
 )
 ```
 
+## GitHub followers
+
+```{r}
+followers <- gh::gh("/orgs/{org}", org = "epiverse-trace") |> 
+  purrr::pluck("followers")
+```
+
+Our Epiverse-TRACE GitHub organization currently has `r followers` followers.
+
 ## GitHub stars ⭐
 
 ```{r}
