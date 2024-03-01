@@ -1,11 +1,11 @@
-pandoc: 2.19.2
+pandoc: 3.1.11
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   citations: citations.html
   cran-statistics: cran-statistics.html
   github-statistics: github-statistics.html
-last_built: 2024-02-15T12:43Z
+last_built: 2024-03-01T04:25Z
 urls:
   reference: https://epiverse-trace.github.io/etstats/reference
   article: https://epiverse-trace.github.io/etstats/articles
