@@ -6,7 +6,7 @@ pkgname <- basename(tools::file_path_sans_ext("{{bibfile}}"))
 
 ```{r, results='asis'}
 bibtex::read.bib("{{bibfile}}") |>
-  purrr::keep(~ attr(unclass(.x), "bibtype") == "Article") |> 
+  purrr::keep(~ attr(unclass(.x), "bibtype") %in% c("Article", "TechReport")) |> 
   format("html", .bibstyle = "by_year") |>
   paste(collapse = "") |>
   cat()
