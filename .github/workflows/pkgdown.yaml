@@ -9,7 +9,7 @@ on:
     types: [published]
   workflow_dispatch:
   schedule:
-    - cron: '5 4 1 * *'
+    - cron: '5 4 * * 1'
 
 name: pkgdown
 
