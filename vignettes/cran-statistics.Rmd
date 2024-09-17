@@ -44,7 +44,19 @@ et_cran_stats <- "https://cranlogs.r-pkg.org/downloads/daily/2022-05-13:{yesterd
   glue::glue() |> 
   jsonlite::fromJSON() |> 
   dplyr::select(-start, -end) |> 
-  tidyr::unnest(downloads)
+  tidyr::unnest(downloads) |> 
+  dplyr::mutate(day = as.Date(day))
+```
+
+```{r}
+et_cran_versions <- et_cran_pkgs |> 
+  purrr::map(pkgsearch::cran_package_history) |> 
+  purrr::list_rbind() |> 
+  dplyr::transmute(
+    package = Package,
+    version = Version,
+    day = as.Date(date)
+  )
 ```
 
 In total, Epiverse-TRACE packages on CRAN have been downloaded `r sum(et_cran_stats$downloads)` times.
@@ -56,13 +68,15 @@ library(ggplot2)
 theme_set(theme_minimal())
 
 et_cran_stats |> 
+  dplyr::full_join(et_cran_versions, by = c("package", "day")) |>
   dplyr::mutate(`Cumulative downloads` = cumsum(downloads), .by = package) |> 
-  dplyr::mutate(day = as.Date(day)) |>
   ggplot(aes(x = day, y = `Cumulative downloads`, color = package)) +
     geom_line() +
+    geom_point(data = ~ dplyr::filter(., !is.na(version))) +
     labs(
       title = "Cumulative downloads of Epiverse-TRACE on CRAN",
-      subtitle = "Data from RStudio CRAN mirror, via cranlogs.r-pkg.org"
+      subtitle = "Points indicate new CRAN releases",
+      caption = "Data from RStudio CRAN mirror, via cranlogs.r-pkg.org"
     ) +
     scale_colour_viridis_d(option = "turbo")
 ```
