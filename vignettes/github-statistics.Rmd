@@ -110,6 +110,8 @@ et_pkgs_stargazers |>
   dplyr::filter(year >= 2022) |> 
   dplyr::count(year, repository, name = "stars") |>
   tidyr::pivot_wider(names_from = year, values_from = stars, values_fill = 0L) |> 
+  janitor::adorn_totals("col") |>
+  dplyr::arrange(desc(Total)) |>
   janitor::adorn_totals("row") |>
   knitr::kable()
 ```
