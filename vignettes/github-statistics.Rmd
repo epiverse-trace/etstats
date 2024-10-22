@@ -39,8 +39,9 @@ et_pkgs_stargazers <- et_pkgs |>
   purrr::set_names() |> 
   purrr::map(function(repo) {
     api_resp <- gh::gh(
-      "/repos/{repo}/stargazers", 
-      repo = repo, 
+      "/repos/{repo}/stargazers",
+      repo = repo,
+      per_page = 100,
       .accept = "application/vnd.github.star+json"
     )
     res <- as.data.frame(cbind(
