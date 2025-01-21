@@ -61,12 +61,27 @@ et_cran_versions <- et_cran_pkgs |>
 
 In total, Epiverse-TRACE packages on CRAN have been downloaded `r sum(et_cran_stats$downloads)` times.
 
-Below is a visualization of the breakdown of this grand total by package over time.
+Below is a visualization of the breakdown of this grand total over time.
 
-```{r, fig.alt=glue::glue("Cumulative downloads of Epiverse-TRACE on CRAN ({toString(et_cran_pkgs)})")}
+```{r, fig.alt="Summed cumulative downloads of Epiverse-TRACE on CRAN"}
 library(ggplot2)
 theme_set(theme_minimal())
 
+et_cran_stats |> 
+  dplyr::summarise(downloads = sum(downloads), .by = day) |>
+  dplyr::arrange(day) |> 
+  dplyr::mutate(`Cumulative downloads` = cumsum(downloads)) |> 
+  ggplot(aes(x = day, y = `Cumulative downloads`)) +
+    geom_line() +
+    labs(
+      title = "Cumulative downloads of Epiverse-TRACE suite on CRAN",
+      caption = "Data from RStudio CRAN mirror, via cranlogs.r-pkg.org"
+    )
+```
+
+And the same breakdown by package:
+
+```{r, fig.alt=glue::glue("Cumulative downloads of Epiverse-TRACE on CRAN ({toString(et_cran_pkgs)})")}
 et_cran_stats |> 
   dplyr::full_join(et_cran_versions, by = c("package", "day")) |>
   dplyr::mutate(`Cumulative downloads` = cumsum(downloads), .by = package) |> 
@@ -74,7 +89,7 @@ et_cran_stats |>
     geom_line() +
     geom_point(data = ~ dplyr::filter(., !is.na(version))) +
     labs(
-      title = "Cumulative downloads of Epiverse-TRACE on CRAN",
+      title = "Cumulative downloads of Epiverse-TRACE packages on CRAN",
       subtitle = "Points indicate new CRAN releases",
       caption = "Data from RStudio CRAN mirror, via cranlogs.r-pkg.org"
     ) +
