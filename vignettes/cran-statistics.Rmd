@@ -63,7 +63,7 @@ In total, Epiverse-TRACE packages on CRAN have been downloaded `r sum(et_cran_st
 
 Below is a visualization of the breakdown of this grand total over time.
 
-```{r, fig.alt="Summed cumulative downloads of Epiverse-TRACE on CRAN"}
+```{r aggregated-downloads-plot, fig.alt="Summed cumulative downloads of Epiverse-TRACE on CRAN"}
 library(ggplot2)
 theme_set(theme_minimal())
 
@@ -81,7 +81,7 @@ et_cran_stats |>
 
 And the same breakdown by package:
 
-```{r, fig.alt=glue::glue("Cumulative downloads of Epiverse-TRACE on CRAN ({toString(et_cran_pkgs)})")}
+```{r package-downloads-plot, fig.alt=glue::glue("Cumulative downloads of Epiverse-TRACE on CRAN ({toString(et_cran_pkgs)})")}
 et_cran_stats |> 
   dplyr::full_join(et_cran_versions, by = c("package", "day")) |>
   dplyr::mutate(`Cumulative downloads` = cumsum(downloads), .by = package) |> 
