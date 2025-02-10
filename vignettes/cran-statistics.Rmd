@@ -104,6 +104,7 @@ et_cran_stats |>
   dplyr::summarize(downloads = sum(downloads)) |> 
   tidyr::pivot_wider(names_from = year, values_from = downloads) |> 
   janitor::adorn_totals("row") |>
+  dplyr::mutate(dplyr::across(dplyr::everything(), ~ ifelse(is.na(.), "", .))) |>
   knitr::kable()
 ```
 
