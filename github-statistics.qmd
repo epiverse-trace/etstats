@@ -1,11 +1,6 @@
 ---
 title: "GitHub statistics"
-output: rmarkdown::html_vignette
 date: "`r Sys.Date()`"
-vignette: >
-  %\VignetteIndexEntry{GitHub statistics}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
@@ -21,7 +16,7 @@ knitr::opts_chunk$set(
 ## GitHub followers
 
 ```{r}
-followers <- gh::gh("/orgs/{org}", org = "epiverse-trace") |> 
+followers <- gh::gh("/orgs/{org}", org = "epiverse-trace") |>
   purrr::pluck("followers")
 ```
 
@@ -30,13 +25,13 @@ Our Epiverse-TRACE GitHub organization currently has `r followers` followers.
 ## GitHub stars ⭐
 
 ```{r}
-et_pkgs <- gh::gh("/orgs/{org}/repos", org = "epiverse-trace") |> 
+et_pkgs <- gh::gh("/orgs/{org}/repos", org = "epiverse-trace") |>
   purrr::map_chr("full_name")
 ```
 
 ```{r}
-et_pkgs_stargazers <- et_pkgs |> 
-  purrr::set_names() |> 
+et_pkgs_stargazers <- et_pkgs |>
+  purrr::set_names() |>
   purrr::map(function(repo) {
     api_resp <- gh::gh(
       "/repos/{repo}/stargazers",
@@ -50,10 +45,10 @@ et_pkgs_stargazers <- et_pkgs |>
       purrr::map_chr(api_resp, c("user", "login"))
     ))
     return(res)
-  }) |> 
-  dplyr::bind_rows() |> 
-  tidyr::drop_na() |> 
-  purrr::set_names(c("repository", "date", "user")) |> 
+  }) |>
+  dplyr::bind_rows() |>
+  tidyr::drop_na() |>
+  purrr::set_names(c("repository", "date", "user")) |>
   dplyr::mutate(date = lubridate::ymd_hms(date))
 ```
 
@@ -65,7 +60,7 @@ In total, we have `r nrow(et_pkgs_stargazers)` stars across all Epiverse-TRACE p
 library(ggplot2)
 theme_set(theme_minimal())
 
-et_pkgs_stargazers |> 
+et_pkgs_stargazers |>
   dplyr::count(repository) |>
   dplyr::mutate(repository = forcats::fct_reorder(repository, n)) |>
   ggplot(aes(x = n, y = repository)) +
@@ -81,15 +76,15 @@ et_pkgs_stargazers |>
 ### Over time
 
 ```{r}
-et_pkgs_stargazers |> 
-  dplyr::group_by(repository) |> 
+et_pkgs_stargazers |>
+  dplyr::group_by(repository) |>
   dplyr::mutate(
     `Cumulative stars` = seq_len(dplyr::n())
-  ) |> 
-  dplyr::ungroup() |> 
+  ) |>
+  dplyr::ungroup() |>
   dplyr::mutate(
     repository = forcats::fct_infreq(repository)
-  ) |> 
+  ) |>
   dplyr::filter(
     lubridate::year(date) >= 2022
   ) |>
@@ -105,11 +100,11 @@ et_pkgs_stargazers |>
 
 ```{r}
 # Break down by year in a table
-et_pkgs_stargazers |> 
-  dplyr::mutate(year = lubridate::year(date)) |> 
-  dplyr::filter(year >= 2022) |> 
+et_pkgs_stargazers |>
+  dplyr::mutate(year = lubridate::year(date)) |>
+  dplyr::filter(year >= 2022) |>
   dplyr::count(year, repository, name = "stars") |>
-  tidyr::pivot_wider(names_from = year, values_from = stars, values_fill = 0L) |> 
+  tidyr::pivot_wider(names_from = year, values_from = stars, values_fill = 0L) |>
   janitor::adorn_totals("col") |>
   dplyr::arrange(desc(Total)) |>
   janitor::adorn_totals("row") |>
