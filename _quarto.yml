@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "Epiverse-TRACE statistics"
+  navbar:
+    left:
+      - index.qmd
+      - github-statistics.qmd
+      - citations.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

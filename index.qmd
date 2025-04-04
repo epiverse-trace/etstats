@@ -1,11 +1,6 @@
 ---
 title: "CRAN statistics"
-output: rmarkdown::html_vignette
 date: "`r Sys.Date()`"
-vignette: >
-  %\VignetteIndexEntry{CRAN statistics}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
@@ -19,16 +14,16 @@ knitr::opts_chunk$set(
 ```
 
 ```{r}
-et_cran_pkgs <- "https://epiverse-trace.r-universe.dev/api/packages/" |> 
+et_cran_pkgs <- "https://epiverse-trace.r-universe.dev/api/packages/" |>
   jsonlite::fromJSON() |>
   dplyr::filter(
     `_registered`,
     `_cranurl`
-    ) |> 
+    ) |>
   dplyr::pull(Package)
 ```
 
-We currently have `r length(et_cran_pkgs)` Epiverse-TRACE packages on CRAN: 
+We currently have `r length(et_cran_pkgs)` Epiverse-TRACE packages on CRAN:
 
 ```{r, results='asis'}
 cat(paste0("- [", sort(et_cran_pkgs), "](https://cran.r-project.org/package=", et_cran_pkgs, ")"), sep = "\n")
@@ -40,18 +35,18 @@ yesterday <- Sys.Date() - 1
 ```
 
 ```{r}
-et_cran_stats <- "https://cranlogs.r-pkg.org/downloads/daily/2022-05-13:{yesterday}/{et_cran_pkgs_string}" |> 
-  glue::glue() |> 
-  jsonlite::fromJSON() |> 
-  dplyr::select(-start, -end) |> 
-  tidyr::unnest(downloads) |> 
+et_cran_stats <- "https://cranlogs.r-pkg.org/downloads/daily/2022-05-13:{yesterday}/{et_cran_pkgs_string}" |>
+  glue::glue() |>
+  jsonlite::fromJSON() |>
+  dplyr::select(-start, -end) |>
+  tidyr::unnest(downloads) |>
   dplyr::mutate(day = as.Date(day))
 ```
 
 ```{r}
-et_cran_versions <- et_cran_pkgs |> 
-  purrr::map(pkgsearch::cran_package_history) |> 
-  purrr::list_rbind() |> 
+et_cran_versions <- et_cran_pkgs |>
+  purrr::map(pkgsearch::cran_package_history) |>
+  purrr::list_rbind() |>
   dplyr::transmute(
     package = Package,
     version = Version,
@@ -67,10 +62,10 @@ Below is a visualization of the breakdown of this grand total over time.
 library(ggplot2)
 theme_set(theme_minimal())
 
-et_cran_stats |> 
+et_cran_stats |>
   dplyr::summarise(downloads = sum(downloads), .by = day) |>
-  dplyr::arrange(day) |> 
-  dplyr::mutate(`Cumulative downloads` = cumsum(downloads)) |> 
+  dplyr::arrange(day) |>
+  dplyr::mutate(`Cumulative downloads` = cumsum(downloads)) |>
   ggplot(aes(x = day, y = `Cumulative downloads`)) +
     geom_line() +
     labs(
@@ -82,9 +77,9 @@ et_cran_stats |>
 And the same breakdown by package:
 
 ```{r package-downloads-plot, fig.alt=glue::glue("Cumulative downloads of Epiverse-TRACE on CRAN ({toString(et_cran_pkgs)})")}
-et_cran_stats |> 
+et_cran_stats |>
   dplyr::full_join(et_cran_versions, by = c("package", "day")) |>
-  dplyr::mutate(`Cumulative downloads` = cumsum(downloads), .by = package) |> 
+  dplyr::mutate(`Cumulative downloads` = cumsum(downloads), .by = package) |>
   ggplot(aes(x = day, y = `Cumulative downloads`, color = package)) +
     geom_line() +
     geom_point(data = ~ dplyr::filter(., !is.na(version))) +
@@ -98,11 +93,11 @@ et_cran_stats |>
 
 ```{r}
 # Break down by year in a table
-et_cran_stats |> 
-  dplyr::mutate(year = lubridate::year(day)) |> 
-  dplyr::group_by(year, package) |> 
-  dplyr::summarize(downloads = sum(downloads)) |> 
-  tidyr::pivot_wider(names_from = year, values_from = downloads) |> 
+et_cran_stats |>
+  dplyr::mutate(year = lubridate::year(day)) |>
+  dplyr::group_by(year, package) |>
+  dplyr::summarize(downloads = sum(downloads)) |>
+  tidyr::pivot_wider(names_from = year, values_from = downloads) |>
   janitor::adorn_totals("row") |>
   dplyr::mutate(dplyr::across(dplyr::everything(), ~ ifelse(is.na(.), "", .))) |>
   knitr::kable()
