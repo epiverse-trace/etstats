@@ -1,10 +1,8 @@
 ---
 title: "Citations"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Citations}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+date: "`r Sys.Date()`"
+aliases:
+  - articles/citations.html
 ---
 
 ```{r, include = FALSE}

@@ -1,6 +1,9 @@
 ---
 title: "GitHub statistics"
 date: "`r Sys.Date()`"
+aliases:
+  - articles/github-statistics.html
+
 ---
 
 ```{r, include = FALSE}
