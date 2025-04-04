@@ -1,6 +1,8 @@
 ---
 title: "CRAN statistics"
 date: "`r Sys.Date()`"
+aliases:
+  - articles/cran-statistics.html
 ---
 
 ```{r, include = FALSE}
