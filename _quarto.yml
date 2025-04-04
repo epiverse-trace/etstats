@@ -9,10 +9,11 @@ website:
       - index.qmd
       - github-statistics.qmd
       - citations.qmd
+  google-analytics: "G-XZ471458FQ"
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, custom.scss]
     css: styles.css
     toc: true
 
