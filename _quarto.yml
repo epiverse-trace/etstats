@@ -2,6 +2,7 @@ project:
   type: website
 
 website:
+  site-url: "https://epiverse-trace.github.io/etstats"
   title: "Epiverse-TRACE statistics"
   navbar:
     left:
