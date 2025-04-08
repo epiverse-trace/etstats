@@ -30,9 +30,7 @@ jobs:
         with:
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          extra-packages: local::.
+      - uses: r-lib/actions/setup-renv@v2
 
       - name: Gather data
         env:
