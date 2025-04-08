@@ -45,7 +45,7 @@ jobs:
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
           git log
-          git add inst/extdata/traffic/*.json
+          git add data/traffic/*.json
           git commit -m 'New traffic data'
           git push origin main
           echo "pushed to github"
