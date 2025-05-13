@@ -34,6 +34,7 @@ jobs:
 
       - name: Gather data
         env:
+          # Fine-grained token with "Administration" repository permissions (read) for all repos
           GITHUB_PAT: ${{ secrets.ET_TOKEN }}
         run: Rscript scripts/github_analytics.R
 
