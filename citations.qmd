@@ -40,7 +40,7 @@ file.path("data", "citations", "epiverse.bib") |>
 # Loop over files in inst/extdata/citations
 file.path("data", "citations") |>
   list.files(full.names = TRUE) |>
-  setdiff(system.file("extdata", "citations", "epiverse.bib", package = "etstats")) |>
+  setdiff(file.path("data", "citations", "epiverse.bib")) |>
   purrr::map_chr(~ knitr::knit_expand(file = "_pkg_citations.Rmd", bibfile = .x)) |>
   knitr::knit(text = _, quiet = TRUE) |>
   cat()
