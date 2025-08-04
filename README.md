@@ -31,4 +31,4 @@ The repository contains automated data collection from:
 
 ## Maintenance
 
-Statistics are [automatically updated through GitHub Actions workflows](./.github/workflows) that collect fresh data from APIs and rebuild the site.
+Statistics are [automatically updated through GitHub Actions workflows](./.github/workflows) that collect fresh data from APIs and rebuild the site. The statistics get updated on a weekly basis.
