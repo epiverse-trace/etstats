@@ -255,7 +255,7 @@ get_epi_repositories <- function(headers) {
       if ("github_repo" %in% names(epi_data)) {
         valid_repos <- epi_data$github_repo[!is.na(epi_data$github_repo) &
                                            epi_data$github_repo != "" &
-                                           grepl("/", epi_data$github_repo) & !grepl("epiverse-trace", epi_data$github_repo)]
+                                           grepl("/", epi_data$github_repo) & !grepl("epiverse-trace", epi_data$github_repo) & !grepl("epiforecasts", epi_data$github_repo)]
         cat("Found", length(valid_repos), "valid GitHub repositories in epidemiology task view\n")
         return(valid_repos)
       } else {
@@ -303,7 +303,7 @@ get_repo_contributions <- function(username, repos, headers) {
         per_page = 100
       )
 
-      response <- GET(repo_url, query = query_params, do.call(add_headers, as.list(headers)))
+      response <- safe_api_call(paste0(repo_url, "?page=", page, "&per_page=100&creator=", username, "&state=all"), headers)
 
       if (status_code(response) != 200) {
         if (status_code(response) == 404) {
@@ -414,7 +414,6 @@ main <- function() {
     if (length(epi_repos) > 0) {
       repo_contributions <- get_repo_contributions(username, epi_repos, headers)
     }
-
     # Combine contributions for this user
     user_contributions <- dplyr::bind_rows(org_contributions, repo_contributions)
 
@@ -484,16 +483,16 @@ main <- function() {
     timestamp <- format(Sys.time(), "%Y%m%d_%H%M%S")
 
     # Save all contributions
-    contributions_file <- paste0("epiverse_contributions_", timestamp, ".csv")
+    contributions_file <- paste0("data/contributions/epiverse_contributions_", timestamp, ".csv")
     write.csv(all_contributions, contributions_file, row.names = FALSE)
     cat("\nAll contributions saved to:", contributions_file, "\n")
 
     # Save summaries
-    source_summary_file <- paste0("source_summary_", timestamp, ".csv")
+    source_summary_file <- paste0("data/contributions/source_summary_", timestamp, ".csv")
     write.csv(source_summary, source_summary_file, row.names = FALSE)
     cat("Source summary saved to:", source_summary_file, "\n")
 
-    contributor_summary_file <- paste0("contributor_summary_", timestamp, ".csv")
+    contributor_summary_file <- paste0("data/contributions/contributor_summary_", timestamp, ".csv")
     write.csv(contributor_summary, contributor_summary_file, row.names = FALSE)
     cat("Contributor summary saved to:", contributor_summary_file, "\n")
 
