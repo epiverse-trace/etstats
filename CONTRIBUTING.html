@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-26">
 
-<title>CRAN statistics – Epiverse-TRACE statistics</title>
+<title>contributing – Epiverse-TRACE statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -103,7 +137,7 @@ gtag('config', 'G-XZ471458FQ', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">CRAN statistics</span></a>
   </li>  
   <li class="nav-item">
@@ -125,199 +159,54 @@ gtag('config', 'G-XZ471458FQ', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#contributing-to-etstats" id="toc-contributing-to-etstats" class="nav-link active" data-scroll-target="#contributing-to-etstats">Contributing to <code>etstats</code></a>
+  <ul class="collapse">
+  <li><a href="#adding-a-citation" id="toc-adding-a-citation" class="nav-link" data-scroll-target="#adding-a-citation">Adding a citation</a>
+  <ul class="collapse">
+  <li><a href="#getting-the-bibtex-itself" id="toc-getting-the-bibtex-itself" class="nav-link" data-scroll-target="#getting-the-bibtex-itself">Getting the BibTex itself</a></li>
+  <li><a href="#adding-it-to-the-relevant-.bib-file" id="toc-adding-it-to-the-relevant-.bib-file" class="nav-link" data-scroll-target="#adding-it-to-the-relevant-.bib-file">Adding it to the relevant <code>.bib</code> file</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">CRAN statistics</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 26, 2025</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>We currently have 14 Epiverse-TRACE packages on CRAN:</p>
-<ul>
-<li><a href="https://cran.r-project.org/package=cfr">cfr</a></li>
-<li><a href="https://cran.r-project.org/package=cleanepi">cleanepi</a></li>
-<li><a href="https://cran.r-project.org/package=ColOpenData">ColOpenData</a></li>
-<li><a href="https://cran.r-project.org/package=epichains">epichains</a></li>
-<li><a href="https://cran.r-project.org/package=epiCo">epiCo</a></li>
-<li><a href="https://cran.r-project.org/package=epiparameter">epiparameter</a></li>
-<li><a href="https://cran.r-project.org/package=epiparameterDB">epiparameterDB</a></li>
-<li><a href="https://cran.r-project.org/package=finalsize">finalsize</a></li>
-<li><a href="https://cran.r-project.org/package=linelist">linelist</a></li>
-<li><a href="https://cran.r-project.org/package=numberize">numberize</a></li>
-<li><a href="https://cran.r-project.org/package=simulist">simulist</a></li>
-<li><a href="https://cran.r-project.org/package=sivirep">sivirep</a></li>
-<li><a href="https://cran.r-project.org/package=superspreading">superspreading</a></li>
-<li><a href="https://cran.r-project.org/package=vaccineff">vaccineff</a></li>
-</ul>
-<p>In total, Epiverse-TRACE packages on CRAN have been downloaded 73023 times.</p>
-<p>Below is a visualization of the breakdown of this grand total over time.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/aggregated-downloads-plot-1.png" class="img-fluid figure-img" alt="Summed cumulative downloads of Epiverse-TRACE on CRAN" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>And the same breakdown by package:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/package-downloads-plot-1.png" class="img-fluid figure-img" alt="Cumulative downloads of Epiverse-TRACE on CRAN (cfr, cleanepi, ColOpenData, epichains, epiCo, epiparameter, epiparameterDB, finalsize, linelist, numberize, simulist, sivirep, superspreading, vaccineff)" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: left;">package</th>
-<th style="text-align: left;">2022</th>
-<th style="text-align: left;">2023</th>
-<th style="text-align: left;">2024</th>
-<th style="text-align: right;">2025</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">finalsize</td>
-<td style="text-align: left;">260</td>
-<td style="text-align: left;">2881</td>
-<td style="text-align: left;">3336</td>
-<td style="text-align: right;">2191</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">linelist</td>
-<td style="text-align: left;">3712</td>
-<td style="text-align: left;">4898</td>
-<td style="text-align: left;">8326</td>
-<td style="text-align: right;">4969</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">cfr</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">364</td>
-<td style="text-align: left;">5216</td>
-<td style="text-align: right;">2686</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">ColOpenData</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">1445</td>
-<td style="text-align: right;">2700</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">cleanepi</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">2003</td>
-<td style="text-align: right;">2740</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">epiCo</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">1169</td>
-<td style="text-align: right;">1734</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">epichains</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">560</td>
-<td style="text-align: right;">1812</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">epiparameterDB</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">269</td>
-<td style="text-align: right;">2191</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">numberize</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">4388</td>
-<td style="text-align: right;">4064</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">sivirep</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">515</td>
-<td style="text-align: right;">1707</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">vaccineff</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">243</td>
-<td style="text-align: right;">1358</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">epiparameter</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">2070</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">simulist</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">1601</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">superspreading</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">1615</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Total</td>
-<td style="text-align: left;">3972</td>
-<td style="text-align: left;">8143</td>
-<td style="text-align: left;">27470</td>
-<td style="text-align: right;">33438</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<section id="contributing-to-etstats" class="level1">
+<h1>Contributing to <code>etstats</code></h1>
+<section id="adding-a-citation" class="level2">
+<h2 class="anchored" data-anchor-id="adding-a-citation">Adding a citation</h2>
+<p>To track where Epiverse-TRACE is used or mentioned, we use <code>BibTex</code>. All citation information is stored under <code>data/citations</code>.</p>
+<section id="getting-the-bibtex-itself" class="level3">
+<h3 class="anchored" data-anchor-id="getting-the-bibtex-itself">Getting the BibTex itself</h3>
+<p>An easy way to get the BibTex information is to get the DOI of the article and run it through <a href="https://www.doi2bib.org" class="uri">https://www.doi2bib.org</a>. A Pubmed Central ID or an arXiv ID will also work.</p>
+<p>You should have something that looks like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bib code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">charniga2024best</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>      <span class="dt">title</span>={Best practices for estimating and reporting epidemiological delay distributions of infectious diseases using public health surveillance and healthcare data},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      <span class="dt">author</span>={Kelly Charniga and Sang Woo Park and Andrei R Akhmetzhanov and Anne Cori and Jonathan Dushoff and Sebastian Funk and Katelyn M Gostic and Natalie M Linton and Adrian Lison and Christopher E Overton and Juliet R C Pulliam and Thomas Ward and Simon Cauchemez and Sam Abbott},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">year</span>={2024},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">journal</span>={arXiv preprint},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">doi</span>={10.48550/arXiv.2405.08841}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="adding-it-to-the-relevant-.bib-file" class="level3">
+<h3 class="anchored" data-anchor-id="adding-it-to-the-relevant-.bib-file">Adding it to the relevant <code>.bib</code> file</h3>
+<p>If your reference is specific to a package, add it to the <code>.bib</code> file for that package. For example, if the reference is for <strong>cfr</strong> use <code>cfr.bib</code>.</p>
+<p>If it is for Epiverse-TRACE more generally, add it to the <code>epiverse.bib</code> file</p>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
