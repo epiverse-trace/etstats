@@ -9,6 +9,10 @@ website:
       - index.qmd
       - github-statistics.qmd
       - citations.qmd
+      - text: "Reports"
+        menu:
+          - text: "Wellcome Phase 1"
+            href: contributions_dashboard.qmd
   google-analytics: "G-XZ471458FQ"
 
 format:
@@ -16,6 +20,3 @@ format:
     theme: [cosmo, custom.scss]
     css: styles.css
     toc: true
-
-
-
