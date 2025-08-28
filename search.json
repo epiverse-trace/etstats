@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Contributing to etstats",
-    "section": "",
-    "text": "To track where Epiverse-TRACE is used or mentioned, we use BibTex. All citation information is stored under data/citations.\n\n\nAn easy way to get the BibTex information is to get the DOI of the article and run it through https://www.doi2bib.org. A Pubmed Central ID or an arXiv ID will also work.\nYou should have something that looks like this:\n@article{charniga2024best,\n      title={Best practices for estimating and reporting epidemiological delay distributions of infectious diseases using public health surveillance and healthcare data},\n      author={Kelly Charniga and Sang Woo Park and Andrei R Akhmetzhanov and Anne Cori and Jonathan Dushoff and Sebastian Funk and Katelyn M Gostic and Natalie M Linton and Adrian Lison and Christopher E Overton and Juliet R C Pulliam and Thomas Ward and Simon Cauchemez and Sam Abbott},\n      year={2024},\n      journal={arXiv preprint},\n      doi={10.48550/arXiv.2405.08841}\n}\n\n\n\nIf your reference is specific to a package, add it to the .bib file for that package. For example, if the reference is for cfr use cfr.bib.\nIf it is for Epiverse-TRACE more generally, add it to the epiverse.bib file"
-  },
-  {
-    "objectID": "CONTRIBUTING.html#adding-a-citation",
-    "href": "CONTRIBUTING.html#adding-a-citation",
-    "title": "Contributing to etstats",
-    "section": "",
-    "text": "To track where Epiverse-TRACE is used or mentioned, we use BibTex. All citation information is stored under data/citations.\n\n\nAn easy way to get the BibTex information is to get the DOI of the article and run it through https://www.doi2bib.org. A Pubmed Central ID or an arXiv ID will also work.\nYou should have something that looks like this:\n@article{charniga2024best,\n      title={Best practices for estimating and reporting epidemiological delay distributions of infectious diseases using public health surveillance and healthcare data},\n      author={Kelly Charniga and Sang Woo Park and Andrei R Akhmetzhanov and Anne Cori and Jonathan Dushoff and Sebastian Funk and Katelyn M Gostic and Natalie M Linton and Adrian Lison and Christopher E Overton and Juliet R C Pulliam and Thomas Ward and Simon Cauchemez and Sam Abbott},\n      year={2024},\n      journal={arXiv preprint},\n      doi={10.48550/arXiv.2405.08841}\n}\n\n\n\nIf your reference is specific to a package, add it to the .bib file for that package. For example, if the reference is for cfr use cfr.bib.\nIf it is for Epiverse-TRACE more generally, add it to the epiverse.bib file"
-  },
-  {
     "objectID": "citations.html",
     "href": "citations.html",
     "title": "Citations",
@@ -35,18 +21,39 @@
     "text": "Package citations\n\nbpmodels\n\n\nWhittaker C, Barnsley G, Olivera Mesa D, Laydon DJ, Tan CW, Zhu F, Johnson R, Doohan P, Nedjati-Gilani G, Winskill P, Hogan AB, Deol A, Mukandavire C, Hauck K, Lye DCB, Wang L, Watson OJ, Ghani AC (2024). “Quantifying the impact of a broadly protective sarbecovirus vaccine in a future SARS-X pandemic.” medRxiv. doi:10.1101/2024.08.12.24311730, https://www.medrxiv.org/content/early/2024/08/12/2024.08.12.24311730.full.pdf, https://www.medrxiv.org/content/early/2024/08/12/2024.08.12.24311730.\n\n\n\n\nAbbott S, Hellewell J, Munday J, Funk S, Group CnW, others (2020). “The transmissibility of novel Coronavirus in the early stages of the 2019-20 outbreak in Wuhan: Exploring initial point-source exposure sizes and durations using scenario analysis.” Wellcome open research, 5, 17. doi:10.12688/wellcomeopenres.15718.1.\n\n\n\n\ncfr\n\n\nNilles EJ, Paulino CT, de St. Aubin M, Restrepo AC, Mayfield H, Dumas D, Finch E, Garnier S, Etienne MC, Iselin L, Duke W, Jarolim P, Oasan T, Yu J, Wan H, Peña F, Iihoshi N, Abdalla G, Lopez B, Cruz Ldl, Henríquez B, Espinosa-Bode A, Puello YC, Durski K, Baldwin M, Baez AA, Merchant RC, Barouch DH, Skewes-Ramm R, Gutiérrez EZ, Kucharski A, Lau CL (2022). “SARS-CoV-2 seroprevalence, cumulative infections, and immunity to symptomatic infection – A multistage national household survey and modelling study, Dominican Republic, June–October 2021.” The Lancet Regional Health – Americas, 16. ISSN 2667-193X, doi:10.1016/j.lana.2022.100390, Publisher: Elsevier, 2023-12-06.\n\n\n\n\nepichains\n\n\nZhao S, Guo Z, Wang K, Sun S, Sun D, Wang W, He D, Chong MK, Hao Y, Yeoh E (2025). “modelSSE: An R Package for Characterizing Infectious Disease Superspreading from Contact Tracing Data.” Bulletin of Mathematical Biology, 87(4), 47. ISSN 1522-9602, doi:10.1007/s11538-025-01421-5.\n\n\n\n\nWard J, Lambert JW, Russell TW, Azam JM, Kucharski AJ, Funk S, Quilty BJ, Gressani O, Hens N, Edmunds WJ (2024). “Estimates of epidemiological parameters for H5N1 influenza in humans: a rapid review.” medRxiv. doi:10.1101/2024.12.11.24318702.\n\n\n\n\nBidari S, Yuan H, Yang W (2025). “Assessing the transmissibility and outbreak risk of measles in the United States, 2024–2030.” The Journal of Infectious Diseases, jiaf342. doi:10.1093/infdis/jiaf342.\n\n\n\n\nepidemics\n\n\nZeina Jamaluddine, Zhixi Chen, Hanan Abukmail, Sarah Aly, Shatha Elnakib, Gregory Barnsley, Fiona Majorin, Hannha Tong, Tak Igusa, Oona MR Campbell, Paul B. Spiegel, Francesco Checchi, the Gaza Health Impact Projections Working Group (2024). “Crisis in Gaza: Scenario-based Health Impact Projections.” Technical Report Report One: 7 February to 6 August 2024, London School of Hygiene and Tropical Medicine, Johns Hopkins University. https://gaza-projections.org/gaza_projections_report.pdf.\n\n\n\n\nepiparameter\n\n\nCharniga K, Park SW, Akhmetzhanov AR, Cori A, Dushoff J, Funk S, Gostic KM, Linton NM, Lison A, Overton CE, Pulliam JRC, Ward T, Cauchemez S, Abbott S (2024). “Best practices for estimating and reporting epidemiological delay distributions of infectious diseases using public health surveillance and healthcare data.” arXiv preprint. doi:10.48550/arXiv.2405.08841.\n\n\n\n\nfinalsize\n\n\nLoster R (2024). Building a Framework for Assessing Policy Compliance and Efficacy in One Health: Insights From a COVID-19 Case Study. Master’s thesis, University of Guelph. https://mathstat.uoguelph.ca/node/592.\n\n\n\n\nBidari S, Yuan H, Yang W (2025). “Assessing the transmissibility and outbreak risk of measles in the United States, 2024–2030.” The Journal of Infectious Diseases, jiaf342. doi:10.1093/infdis/jiaf342.\n\n\n\n\nserofoi\n\n\nMenezes A, Takahashi S, Routledge I, Metcalf CJE, Graham AL, Hay JA (2023). “serosim: An R package for simulating serological data arising from vaccination, epidemiological and antibody kinetics processes.” PLOS Computational Biology, 19(8), 1-25. doi:10.1371/journal.pcbi.1011384.\n\n\n\n\nHay J, Routledge I, Takahashi S (2023). “Serodynamics: a review of methods for epidemiological inference using serological data.” OSF Preprints. doi:10.31219/osf.io/kqdsn.\n\n\n\n\nKamau E, Chen J, Bajaj S, Torres N, Creswell R, Pavlich-Mariscal JA, Donnelly C, Cucunubá Z, Lambert B (2025). “The Mathematics of Serocatalytic Models with applications to public health data.” medRxiv. doi:10.1101/2025.01.21.25320864."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CRAN statistics",
+    "section": "",
+    "text": "We currently have 14 Epiverse-TRACE packages on CRAN:\n\ncfr\ncleanepi\nColOpenData\nepichains\nepiCo\nepiparameter\nepiparameterDB\nfinalsize\nlinelist\nnumberize\nsimulist\nsivirep\nsuperspreading\nvaccineff\n\nIn total, Epiverse-TRACE packages on CRAN have been downloaded 73023 times.\nBelow is a visualization of the breakdown of this grand total over time.\n\n\n\n\n\n\n\n\n\nAnd the same breakdown by package:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npackage\n2022\n2023\n2024\n2025\n\n\n\n\nfinalsize\n260\n2881\n3336\n2191\n\n\nlinelist\n3712\n4898\n8326\n4969\n\n\ncfr\n\n364\n5216\n2686\n\n\nColOpenData\n\n\n1445\n2700\n\n\ncleanepi\n\n\n2003\n2740\n\n\nepiCo\n\n\n1169\n1734\n\n\nepichains\n\n\n560\n1812\n\n\nepiparameterDB\n\n\n269\n2191\n\n\nnumberize\n\n\n4388\n4064\n\n\nsivirep\n\n\n515\n1707\n\n\nvaccineff\n\n\n243\n1358\n\n\nepiparameter\n\n\n\n2070\n\n\nsimulist\n\n\n\n1601\n\n\nsuperspreading\n\n\n\n1615\n\n\nTotal\n3972\n8143\n27470\n33438"
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing to etstats",
+    "section": "",
+    "text": "To track where Epiverse-TRACE is used or mentioned, we use BibTex. All citation information is stored under data/citations.\n\n\nAn easy way to get the BibTex information is to get the DOI of the article and run it through https://www.doi2bib.org. A Pubmed Central ID or an arXiv ID will also work.\nYou should have something that looks like this:\n@article{charniga2024best,\n      title={Best practices for estimating and reporting epidemiological delay distributions of infectious diseases using public health surveillance and healthcare data},\n      author={Kelly Charniga and Sang Woo Park and Andrei R Akhmetzhanov and Anne Cori and Jonathan Dushoff and Sebastian Funk and Katelyn M Gostic and Natalie M Linton and Adrian Lison and Christopher E Overton and Juliet R C Pulliam and Thomas Ward and Simon Cauchemez and Sam Abbott},\n      year={2024},\n      journal={arXiv preprint},\n      doi={10.48550/arXiv.2405.08841}\n}\n\n\n\nIf your reference is specific to a package, add it to the .bib file for that package. For example, if the reference is for cfr use cfr.bib.\nIf it is for Epiverse-TRACE more generally, add it to the epiverse.bib file"
+  },
+  {
+    "objectID": "CONTRIBUTING.html#adding-a-citation",
+    "href": "CONTRIBUTING.html#adding-a-citation",
+    "title": "Contributing to etstats",
+    "section": "",
+    "text": "To track where Epiverse-TRACE is used or mentioned, we use BibTex. All citation information is stored under data/citations.\n\n\nAn easy way to get the BibTex information is to get the DOI of the article and run it through https://www.doi2bib.org. A Pubmed Central ID or an arXiv ID will also work.\nYou should have something that looks like this:\n@article{charniga2024best,\n      title={Best practices for estimating and reporting epidemiological delay distributions of infectious diseases using public health surveillance and healthcare data},\n      author={Kelly Charniga and Sang Woo Park and Andrei R Akhmetzhanov and Anne Cori and Jonathan Dushoff and Sebastian Funk and Katelyn M Gostic and Natalie M Linton and Adrian Lison and Christopher E Overton and Juliet R C Pulliam and Thomas Ward and Simon Cauchemez and Sam Abbott},\n      year={2024},\n      journal={arXiv preprint},\n      doi={10.48550/arXiv.2405.08841}\n}\n\n\n\nIf your reference is specific to a package, add it to the .bib file for that package. For example, if the reference is for cfr use cfr.bib.\nIf it is for Epiverse-TRACE more generally, add it to the epiverse.bib file"
+  },
+  {
     "objectID": "github-statistics.html",
     "href": "github-statistics.html",
     "title": "GitHub statistics",
     "section": "",
-    "text": "Our Epiverse-TRACE GitHub organization currently has 217 followers."
+    "text": "Our Epiverse-TRACE GitHub organization currently has 219 followers."
   },
   {
     "objectID": "github-statistics.html#github-followers",
     "href": "github-statistics.html#github-followers",
     "title": "GitHub statistics",
     "section": "",
-    "text": "Our Epiverse-TRACE GitHub organization currently has 217 followers."
+    "text": "Our Epiverse-TRACE GitHub organization currently has 219 followers."
   },
   {
     "objectID": "github-statistics.html#github-stars",
@@ -56,10 +63,38 @@
     "text": "GitHub stars ⭐\n\nTotals\nIn total, we have 235 stars across all Epiverse-TRACE packages. These stars come from 155 unique users.\n\n\n\n\n\n\n\n\n\n\n\nOver time\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrepository\n2022\n2023\n2024\n2025\nTotal\n\n\n\n\nsivirep\n0\n21\n21\n0\n42\n\n\nepiparameter\n8\n9\n13\n5\n35\n\n\nserofoi\n0\n8\n7\n5\n20\n\n\nvaccineff\n0\n5\n10\n1\n16\n\n\ncfr\n2\n9\n2\n2\n15\n\n\nfinalsize\n4\n5\n1\n3\n13\n\n\nepiCo\n0\n3\n7\n3\n13\n\n\nepidemics\n0\n4\n3\n4\n11\n\n\nlinelist\n3\n1\n3\n3\n10\n\n\nepi-training-kit\n0\n5\n2\n3\n10\n\n\ncleanepi\n0\n2\n5\n1\n8\n\n\nreadepi\n3\n2\n1\n0\n6\n\n\nepichains\n0\n1\n5\n0\n6\n\n\npackagetemplate\n0\n3\n3\n0\n6\n\n\nsuperspreading\n1\n3\n0\n1\n5\n\n\nepisoap\n0\n3\n1\n0\n4\n\n\nepiverse-trace.r-universe.dev\n2\n0\n1\n0\n3\n\n\nepiverse-trace.github.io\n0\n1\n1\n1\n3\n\n\nblueprints\n0\n0\n3\n0\n3\n\n\nepiversedashboard\n1\n0\n0\n0\n1\n\n\netdev\n0\n1\n0\n0\n1\n\n\netstats\n0\n1\n0\n0\n1\n\n\npersonas\n0\n1\n0\n0\n1\n\n\nquickfit\n0\n1\n0\n0\n1\n\n\n.github\n0\n0\n1\n0\n1\n\n\nTotal\n24\n89\n90\n32\n235"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CRAN statistics",
+    "objectID": "contributions_dashboard.html",
+    "href": "contributions_dashboard.html",
+    "title": "Epiverse-TRACE Ecosystem Contributions",
     "section": "",
-    "text": "We currently have 14 Epiverse-TRACE packages on CRAN:\n\ncfr\ncleanepi\nColOpenData\nepichains\nepiCo\nepiparameter\nepiparameterDB\nfinalsize\nlinelist\nnumberize\nsimulist\nsivirep\nsuperspreading\nvaccineff\n\nIn total, Epiverse-TRACE packages on CRAN have been downloaded 73023 times.\nBelow is a visualization of the breakdown of this grand total over time.\n\n\n\n\n\n\n\n\n\nAnd the same breakdown by package:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npackage\n2022\n2023\n2024\n2025\n\n\n\n\nfinalsize\n260\n2881\n3336\n2191\n\n\nlinelist\n3712\n4898\n8326\n4969\n\n\ncfr\n\n364\n5216\n2686\n\n\nColOpenData\n\n\n1445\n2700\n\n\ncleanepi\n\n\n2003\n2740\n\n\nepiCo\n\n\n1169\n1734\n\n\nepichains\n\n\n560\n1812\n\n\nepiparameterDB\n\n\n269\n2191\n\n\nnumberize\n\n\n4388\n4064\n\n\nsivirep\n\n\n515\n1707\n\n\nvaccineff\n\n\n243\n1358\n\n\nepiparameter\n\n\n\n2070\n\n\nsimulist\n\n\n\n1601\n\n\nsuperspreading\n\n\n\n1615\n\n\nTotal\n3972\n8143\n27470\n33438"
+    "text": "NoteKey Findings\n\n\n\n259 contributions across 50 repositories in the broader R ecosystem\n78% of contributions were to critical ecosystem infrastructure: Core R libraries (r-lib), ROpenSci, and the Carpentries\n14 team members contributed to the wider ecosystem at least once\nTop 3 contributors (from data.org, LSHTM, and MRCG) accounted for 85% of all contributions"
+  },
+  {
+    "objectID": "contributions_dashboard.html#contribution-overview",
+    "href": "contributions_dashboard.html#contribution-overview",
+    "title": "Epiverse-TRACE Ecosystem Contributions",
+    "section": "Contribution Overview",
+    "text": "Contribution Overview\n\nTotal Contributions by Ecosystem Component\n\n\n\n\n\n\n\n\nRepository Impact: Stars vs Contributions"
+  },
+  {
+    "objectID": "contributions_dashboard.html#institutional-analysis",
+    "href": "contributions_dashboard.html#institutional-analysis",
+    "title": "Epiverse-TRACE Ecosystem Contributions",
+    "section": "Institutional Analysis",
+    "text": "Institutional Analysis\n\nContributions by Organization\n\n\n\n\n\n\n\n\nTop Contributors\n\n\n\nTop 10 Contributors to the Broader Ecosystem\n\n\nOrganization\nUsername\nTotal Contributions\nIssues\nPull Requests\nRepositories Contributed To\n\n\n\n\ndata.org\nBisaloo\n196\n5\n191\n36\n\n\nLSHTM\navallecam\n16\n3\n13\n8\n\n\nLSHTM/MRCG\nbahadzie\n9\n0\n9\n5\n\n\nLSHTM\nsbfnk\n7\n1\n6\n4\n\n\ndata.org\nchartgerink\n6\n1\n5\n2\n\n\nLSHTM\njoshwlambert\n6\n3\n3\n4\n\n\nLSHTM\njamesmbaazam\n5\n2\n3\n3\n\n\nExternal\nrebeccanash\n5\n0\n5\n1\n\n\nLSHTM\nBlackEdder\n2\n0\n2\n1\n\n\nLSHTM\nadamkucharski\n2\n2\n0\n2\n\n\nExternal\nben18785\n2\n2\n0\n2"
+  },
+  {
+    "objectID": "contributions_dashboard.html#contribution-timeline",
+    "href": "contributions_dashboard.html#contribution-timeline",
+    "title": "Epiverse-TRACE Ecosystem Contributions",
+    "section": "Contribution Timeline",
+    "text": "Contribution Timeline"
+  },
+  {
+    "objectID": "contributions_dashboard.html#ecosystem-contributions-summary",
+    "href": "contributions_dashboard.html#ecosystem-contributions-summary",
+    "title": "Epiverse-TRACE Ecosystem Contributions",
+    "section": "Ecosystem Contributions Summary",
+    "text": "Ecosystem Contributions Summary\n\n\n\nSummary Statistics by Ecosystem Component\n\n\nEcosystem Component\nRepositories\nContributions\nOur Contributors\nAvg Stars\nTotal Stars\n\n\n\n\nCore R Libraries (r-lib)\n15\n104\n22\n605\n9071\n\n\nROpenSci\n13\n67\n18\n71\n927\n\n\nOther Repositories\n13\n58\n21\n34\n440\n\n\nThe Carpentries\n9\n30\n10\n16\n143\n\n\n\n\n\n\n\nDashboard generated on 2025-08-28 • Data collected on 2025-08-05"
   }
 ]
