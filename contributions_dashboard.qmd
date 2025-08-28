@@ -1,0 +1,259 @@
+---
+title: "Epiverse-TRACE Ecosystem Contributions"
+subtitle: "Analysis of contributions to the broader R ecosystem during the Wellcome Epiverse-TRACE Phase 1 grant"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Show code"
+    fig-width: 10
+    fig-height: 6
+    self-contained: true
+    embed-resources: true
+execute:
+  warning: false
+  message: false
+  echo: false
+  freeze: true
+editor: visual
+---
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(DT)
+library(plotly)
+library(scales)
+library(knitr)
+library(kableExtra)
+library(viridis)
+
+# Load data
+source_summary <- read_csv("data/contributions/source_summary_20250805_130519.csv")
+contributor_summary <- read_csv("data/contributions/contributor_summary_20250805_130519.csv")
+contributions_detail <- read_csv("data/contributions/epiverse_contributions_20250805_130519.csv")
+
+# Clean and prepare data
+source_summary <- source_summary %>%
+  mutate(
+    ecosystem_type = case_when(
+      str_detect(repository, "^r-lib/") ~ "Core R Libraries (r-lib)",
+      str_detect(repository, "^ropensci") ~ "ROpenSci",
+      str_detect(repository, "^carpentries/") ~ "The Carpentries",
+      TRUE ~ "Other Repositories"
+    )
+  )
+
+contributor_summary <- contributor_summary %>%
+  mutate(
+    org_clean = case_when(
+      org == "LSHTM/MRCG" ~ "LSHTM/MRCG",
+      org == "data.org" ~ "data.org",
+      org == "LSHTM" ~ "LSHTM",
+      TRUE ~ "External"
+    )
+  )
+
+# Calculate key metrics
+total_contributions <- sum(source_summary$contributions)
+total_repositories <- nrow(source_summary)
+total_contributors <- nrow(contributor_summary)
+core_ecosystem_contributions <- source_summary %>%
+  filter(ecosystem_type %in% c("Core R Libraries (r-lib)", "ROpenSci", "The Carpentries")) %>%
+  summarise(total = sum(contributions)) %>%
+  pull(total)
+core_ecosystem_pct <- round(core_ecosystem_contributions / total_contributions * 100)
+
+top_3_contributors <- contributor_summary %>%
+  slice_max(total_contributions, n = 3) %>%
+  summarise(total = sum(total_contributions)) %>%
+  pull(total)
+top_3_pct <- round(top_3_contributors / total_contributions * 100)
+```
+
+::: {.callout-note icon="false"}
+## Key Findings
+
+**`r total_contributions` contributions** across **`r total_repositories` repositories** in the broader R ecosystem
+
+**`r core_ecosystem_pct`%** of contributions were to critical ecosystem infrastructure: Core R libraries (r-lib), ROpenSci, and the Carpentries
+
+**`r total_contributors` team members** contributed to the wider ecosystem at least once
+
+**Top 3 contributors** (from data.org, LSHTM, and MRCG) accounted for **`r top_3_pct`%** of all contributions
+:::
+
+## Contribution Overview
+
+### Total Contributions by Ecosystem Component
+
+```{r ecosystem-overview}
+ecosystem_summary <- source_summary %>%
+  group_by(ecosystem_type) %>%
+  summarise(
+    repositories = n(),
+    contributions = sum(contributions),
+    contributors = sum(contributors),
+    avg_stars = round(mean(stars, na.rm = TRUE)),
+    total_stars = sum(stars, na.rm = TRUE)
+  ) %>%
+  arrange(desc(contributions))
+
+p1 <- ecosystem_summary %>%
+  ggplot(aes(x = reorder(ecosystem_type, contributions), y = contributions, fill = ecosystem_type)) +
+  geom_col(alpha = 0.8) +
+  geom_text(aes(label = contributions), hjust = -0.1, size = 4, fontface = "bold") +
+  scale_fill_viridis_d(name = "Ecosystem Component") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
+  coord_flip() +
+  labs(
+    title = "Contributions by Ecosystem Component",
+    subtitle = "Total number of contributions (issues + pull requests)",
+    x = "",
+    y = "Number of Contributions"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "none",
+        plot.title = element_text(size = 14, face = "bold"),
+        panel.grid.major.y = element_blank())
+
+ggplotly(p1, tooltip = c("x", "y")) %>%
+  layout(margin = list(l = 200))
+```
+
+### Repository Impact: Stars vs Contributions
+
+```{r stars-contributions}
+p2 <- source_summary %>%
+  ggplot(aes(x = contributions, y = stars, color = ecosystem_type, size = contributors)) +
+  geom_point(alpha = 0.7) +
+  scale_color_viridis_d(name = "Ecosystem") +
+  scale_size_continuous(name = "Contributors", range = c(2, 8)) +
+  scale_x_log10(labels = comma_format()) +
+  scale_y_log10(labels = comma_format()) +
+  labs(
+    title = "Community Impact vs Our Contributions",
+    subtitle = "Repository stars (community adoption) vs our contributions",
+    x = "Number of Contributions (log scale)",
+    y = "GitHub Stars (log scale)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(size = 14, face = "bold"))
+
+ggplotly(p2, tooltip = c("colour", "x", "y", "size"))
+```
+
+------------------------------------------------------------------------
+
+## Institutional Analysis
+
+### Contributions by Organization
+
+```{r org-analysis}
+org_summary <- contributor_summary %>%
+  group_by(org_clean) %>%
+  summarise(
+    contributors = n(),
+    total_contributions = sum(total_contributions),
+    avg_contributions = round(mean(total_contributions), 1),
+    repositories = sum(repositories)
+  ) %>%
+  arrange(desc(total_contributions))
+
+p3 <- org_summary %>%
+  ggplot(aes(x = reorder(org_clean, total_contributions), y = total_contributions, fill = org_clean)) +
+  geom_col(alpha = 0.8) +
+  geom_text(aes(label = paste0(total_contributions, "\n(", contributors, " people)")),
+            hjust = -0.1, size = 3.5) +
+  scale_fill_viridis_d(name = "Organization") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  coord_flip() +
+  labs(
+    title = "Contributions by Institution",
+    subtitle = "Total contributions and number of contributors per organization",
+    x = "",
+    y = "Total Contributions"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "none",
+        plot.title = element_text(size = 14, face = "bold"),
+        panel.grid.major.y = element_blank())
+
+ggplotly(p3, tooltip = c("x", "y"))
+```
+
+### Top Contributors
+
+```{r top-contributors}
+top_contributors <- contributor_summary %>%
+  slice_max(total_contributions, n = 10) %>%
+  select(Organization = org_clean, Username = username,
+         `Total Contributions` = total_contributions,
+         Issues = issues, `Pull Requests` = pull_requests,
+         `Repositories Contributed To` = repositories)
+
+kable(top_contributors,
+      caption = "Top 10 Contributors to the Broader Ecosystem") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                full_width = FALSE) %>%
+  row_spec(1:3, bold = TRUE, background = "#f0f8ff")
+```
+
+------------------------------------------------------------------------
+
+## Contribution Timeline
+
+```{r timeline}
+# Process contribution timeline
+timeline_data <- contributions_detail %>%
+  mutate(
+    created_date = as.Date(created_at),
+    year_month = floor_date(created_date, "month")
+  ) %>%
+  filter(!is.na(created_date)) %>%
+  count(year_month, type, name = "contributions") %>%
+  complete(year_month, type, fill = list(contributions = 0))
+
+p4 <- timeline_data %>%
+  ggplot(aes(x = year_month, y = contributions, fill = type)) +
+  geom_col(position = "stack", alpha = 0.8) +
+  scale_fill_viridis_d(name = "Contribution Type",
+                      labels = c("Issues", "Pull Requests")) +
+  scale_x_date(date_labels = "%Y-%m", date_breaks = "3 months") +
+  labs(
+    title = "Contribution Timeline",
+    subtitle = "Monthly contributions to the broader ecosystem",
+    x = "Date",
+    y = "Number of Contributions"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(size = 14, face = "bold"),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+ggplotly(p4, tooltip = c("x", "y", "fill"))
+```
+
+------------------------------------------------------------------------
+
+## Ecosystem Contributions Summary
+
+```{r summary-table}
+kable(ecosystem_summary,
+      caption = "Summary Statistics by Ecosystem Component",
+      col.names = c("Ecosystem Component", "Repositories", "Contributions",
+                   "Our Contributors", "Avg Stars", "Total Stars")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                full_width = TRUE) %>%
+  column_spec(1, width = "30%") %>%
+  row_spec(which(ecosystem_summary$ecosystem_type %in%
+                c("Core R Libraries (r-lib)", "ROpenSci", "The Carpentries")),
+           bold = TRUE, background = "#f0f8ff")
+```
+
+------------------------------------------------------------------------
+
+<footer>*Dashboard generated on `r Sys.Date()` • Data collected on 2025-08-05*</footer>

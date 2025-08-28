@@ -453,7 +453,7 @@ main <- function() {
 
     # Summary by source
     source_summary <- all_contributions %>%
-      group_by(source_type, source) %>%
+      group_by(repository) %>%
       summarise(
         contributions = n(),
         contributors = n_distinct(username),
