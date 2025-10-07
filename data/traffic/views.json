@@ -1,4 +1,351 @@
 {
+  "2025-10-07": [
+    {
+      "package": "cfr",
+      "count": 28,
+      "uniques": 13
+    },
+    {
+      "package": "linelist",
+      "count": 28,
+      "uniques": 16
+    },
+    {
+      "package": "epiparameter",
+      "count": 62,
+      "uniques": 38
+    },
+    {
+      "package": "finalsize",
+      "count": 74,
+      "uniques": 25
+    },
+    {
+      "package": "blueprints",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "serofoi",
+      "count": 43,
+      "uniques": 17
+    },
+    {
+      "package": "vaccineff",
+      "count": 96,
+      "uniques": 15
+    },
+    {
+      "package": "readepi",
+      "count": 60,
+      "uniques": 11
+    },
+    {
+      "package": "sivirep",
+      "count": 137,
+      "uniques": 24
+    },
+    {
+      "package": "epiverse-trace.r-universe.dev",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "epiversedashboard",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "packagetemplate",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "episoap",
+      "count": 13,
+      "uniques": 8
+    },
+    {
+      "package": ".github",
+      "count": 37,
+      "uniques": 14
+    },
+    {
+      "package": "epiCo",
+      "count": 31,
+      "uniques": 13
+    },
+    {
+      "package": "superspreading",
+      "count": 12,
+      "uniques": 10
+    },
+    {
+      "package": "epiverse-trace.github.io",
+      "count": 34,
+      "uniques": 20
+    },
+    {
+      "package": "etdev",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "scenarios",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "epidemics",
+      "count": 101,
+      "uniques": 16
+    },
+    {
+      "package": "quickfit",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "cleanepi",
+      "count": 45,
+      "uniques": 20
+    },
+    {
+      "package": "epiversetheme",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "rmdscaffold",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "hex-stickers",
+      "count": 7,
+      "uniques": 1
+    },
+    {
+      "package": "epichains",
+      "count": 26,
+      "uniques": 22
+    },
+    {
+      "package": "lessons",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "personas",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "etstats",
+      "count": 4,
+      "uniques": 2
+    },
+    {
+      "package": "epi-training-kit",
+      "count": 3,
+      "uniques": 2
+    },
+    {
+      "package": "howto",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "iraca",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "llm-guidance",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "tutorials",
+      "count": 65,
+      "uniques": 15
+    },
+    {
+      "package": "research-compendium",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "simulist",
+      "count": 13,
+      "uniques": 10
+    },
+    {
+      "package": "ColOpenData",
+      "count": 14,
+      "uniques": 10
+    },
+    {
+      "package": "epishiny",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "git-rstudio-basics",
+      "count": 10,
+      "uniques": 3
+    },
+    {
+      "package": "numberize",
+      "count": 14,
+      "uniques": 12
+    },
+    {
+      "package": "varnish",
+      "count": 4,
+      "uniques": 1
+    },
+    {
+      "package": "epimodelac",
+      "count": 4,
+      "uniques": 4
+    },
+    {
+      "package": "sandpaper",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "epiverse",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "tracetheme",
+      "count": 7,
+      "uniques": 4
+    },
+    {
+      "package": "epinetwork",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "tutorials-late",
+      "count": 25,
+      "uniques": 6
+    },
+    {
+      "package": "tutorials-middle",
+      "count": 201,
+      "uniques": 14
+    },
+    {
+      "package": "tutorials-early",
+      "count": 21,
+      "uniques": 8
+    },
+    {
+      "package": "Severity_methods_assessment",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "safeframe",
+      "count": 4,
+      "uniques": 3
+    },
+    {
+      "package": "shinyapps-tracelac",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "tutorials-middle-es",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "epiparameterDashboard",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "gam-summit",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "climateR0",
+      "count": 50,
+      "uniques": 4
+    },
+    {
+      "package": "etdashboard",
+      "count": 7,
+      "uniques": 4
+    },
+    {
+      "package": "epitkit",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "epiparameterDB",
+      "count": 22,
+      "uniques": 12
+    },
+    {
+      "package": "epiverse_demos",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "translation-epitkit",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "epishowcase",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "showcasedata",
+      "count": 3,
+      "uniques": 3
+    },
+    {
+      "package": "EpiTKit-EN",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "EpiTKit-FR",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "epimodelac-en",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "package": "epiverselearner",
+      "count": 0,
+      "uniques": 0
+    },
+    {
+      "package": "tutorials-early-fr",
+      "count": 2,
+      "uniques": 2
+    },
+    {
+      "package": "tutorials-middle-fr",
+      "count": 83,
+      "uniques": 6
+    }
+  ],
   "2025-09-30": [
     {
       "package": "cfr",
