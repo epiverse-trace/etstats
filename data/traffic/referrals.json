@@ -1,4 +1,581 @@
 {
+  "2026-03-10": [
+    {
+      "package": "cfr"
+    },
+    {
+      "package": "linelist",
+      "2": {
+        "referrer": "github.com",
+        "count": 2,
+        "uniques": 2
+      }
+    },
+    {
+      "package": "epiparameter",
+      "2": {
+        "referrer": "github.com",
+        "count": 4,
+        "uniques": 4
+      },
+      "3": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 2,
+        "uniques": 2
+      },
+      "4": {
+        "referrer": "worldhealthorg.shinyapps.io",
+        "count": 2,
+        "uniques": 2
+      },
+      "5": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      },
+      "6": {
+        "referrer": "epiforecasts.io",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "finalsize",
+      "2": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 24,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 18,
+        "uniques": 2
+      }
+    },
+    {
+      "package": "blueprints"
+    },
+    {
+      "package": "serofoi",
+      "2": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 11,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "cran.r-project.org",
+        "count": 2,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "DuckDuckGo",
+        "count": 1,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "vaccineff",
+      "2": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "readepi",
+      "2": {
+        "referrer": "Bing",
+        "count": 4,
+        "uniques": 4
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 2,
+        "uniques": 2
+      },
+      "4": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 1,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "sivirep",
+      "2": {
+        "referrer": "github.com",
+        "count": 23,
+        "uniques": 2
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 5,
+        "uniques": 3
+      },
+      "4": {
+        "referrer": "epiverse-trace.r-universe.dev",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiverse-trace.r-universe.dev"
+    },
+    {
+      "package": "epiversedashboard"
+    },
+    {
+      "package": "packagetemplate",
+      "2": {
+        "referrer": "Google",
+        "count": 2,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "episoap",
+      "2": {
+        "referrer": "DuckDuckGo",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": ".github",
+      "2": {
+        "referrer": "Google",
+        "count": 4,
+        "uniques": 2
+      },
+      "3": {
+        "referrer": "cran.r-project.org",
+        "count": 1,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiCo",
+      "2": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 2,
+        "uniques": 1
+      },
+      "3": {
+        "referrer": "Bing",
+        "count": 1,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "superspreading"
+    },
+    {
+      "package": "epiverse-trace.github.io",
+      "2": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 16,
+        "uniques": 5
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 6,
+        "uniques": 5
+      },
+      "4": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "etdev"
+    },
+    {
+      "package": "scenarios"
+    },
+    {
+      "package": "epidemics",
+      "2": {
+        "referrer": "Google",
+        "count": 30,
+        "uniques": 6
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 4,
+        "uniques": 2
+      },
+      "4": {
+        "referrer": "Yahoo",
+        "count": 1,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "quickfit"
+    },
+    {
+      "package": "cleanepi",
+      "2": {
+        "referrer": "DuckDuckGo",
+        "count": 9,
+        "uniques": 1
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 5,
+        "uniques": 2
+      },
+      "4": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 1,
+        "uniques": 1
+      },
+      "6": {
+        "referrer": "epiverse-trace.r-universe.dev",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiversetheme"
+    },
+    {
+      "package": "rmdscaffold"
+    },
+    {
+      "package": "hex-stickers"
+    },
+    {
+      "package": "epichains",
+      "2": {
+        "referrer": "Google",
+        "count": 6,
+        "uniques": 5
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 4,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "Bing",
+        "count": 3,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "zenodo.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "lessons"
+    },
+    {
+      "package": "personas",
+      "2": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "etstats",
+      "2": {
+        "referrer": "git.hubp.de",
+        "count": 1,
+        "uniques": 1
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epi-training-kit"
+    },
+    {
+      "package": "howto",
+      "2": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 1,
+        "uniques": 1
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "iraca"
+    },
+    {
+      "package": "llm-guidance"
+    },
+    {
+      "package": "tutorials",
+      "2": {
+        "referrer": "github.com",
+        "count": 9,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 6,
+        "uniques": 3
+      }
+    },
+    {
+      "package": "research-compendium",
+      "2": {
+        "referrer": "github.com",
+        "count": 2,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "simulist",
+      "2": {
+        "referrer": "joss.theoj.org",
+        "count": 4,
+        "uniques": 2
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 2,
+        "uniques": 2
+      },
+      "4": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "ColOpenData",
+      "2": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 16,
+        "uniques": 2
+      },
+      "3": {
+        "referrer": "github.com",
+        "count": 5,
+        "uniques": 1
+      },
+      "4": {
+        "referrer": "Google",
+        "count": 1,
+        "uniques": 1
+      },
+      "5": {
+        "referrer": "cran.r-project.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epishiny"
+    },
+    {
+      "package": "git-rstudio-basics",
+      "2": {
+        "referrer": "Bing",
+        "count": 1,
+        "uniques": 1
+      },
+      "3": {
+        "referrer": "ecosia.org",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "numberize",
+      "2": {
+        "referrer": "cran.r-project.org",
+        "count": 2,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "varnish"
+    },
+    {
+      "package": "epimodelac"
+    },
+    {
+      "package": "sandpaper"
+    },
+    {
+      "package": "epiverse"
+    },
+    {
+      "package": "tracetheme"
+    },
+    {
+      "package": "epinetwork"
+    },
+    {
+      "package": "tutorials-late",
+      "2": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "tutorials-middle",
+      "2": {
+        "referrer": "github.com",
+        "count": 3,
+        "uniques": 1
+      },
+      "3": {
+        "referrer": "copilot.microsoft.com",
+        "count": 2,
+        "uniques": 2
+      },
+      "4": {
+        "referrer": "git.hubp.de",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "tutorials-early",
+      "2": {
+        "referrer": "github.com",
+        "count": 67,
+        "uniques": 3
+      },
+      "3": {
+        "referrer": "Google",
+        "count": 7,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "Severity_methods_assessment"
+    },
+    {
+      "package": "safeframe"
+    },
+    {
+      "package": "shinyapps-tracelac"
+    },
+    {
+      "package": "tutorials-middle-es"
+    },
+    {
+      "package": "epiparameterDashboard"
+    },
+    {
+      "package": "gam-summit"
+    },
+    {
+      "package": "climateR0"
+    },
+    {
+      "package": "etdashboard",
+      "2": {
+        "referrer": "github.com",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epitkit",
+      "2": {
+        "referrer": "git.hubp.de",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiparameterDB",
+      "2": {
+        "referrer": "epiverse-trace.github.io",
+        "count": 3,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epiverse_demos"
+    },
+    {
+      "package": "translation-epitkit"
+    },
+    {
+      "package": "epishowcase"
+    },
+    {
+      "package": "showcasedata"
+    },
+    {
+      "package": "EpiTKit-EN"
+    },
+    {
+      "package": "EpiTKit-FR",
+      "2": {
+        "referrer": "git.hubp.de",
+        "count": 1,
+        "uniques": 1
+      }
+    },
+    {
+      "package": "epimodelac-en"
+    },
+    {
+      "package": "epiverselearner"
+    },
+    {
+      "package": "tutorials-early-fr"
+    },
+    {
+      "package": "tutorials-middle-fr"
+    },
+    {
+      "package": "tutorials-late-fr",
+      "2": {
+        "referrer": "git.hubp.de",
+        "count": 2,
+        "uniques": 2
+      }
+    }
+  ],
   "2026-03-03": [
     {
       "package": "cfr"
