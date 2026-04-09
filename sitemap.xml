@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://epiverse-trace.github.io/etstats/github-statistics.html</loc>
-    <lastmod>2026-02-11T11:53:33.086Z</lastmod>
-  </url>
-  <url>
-    <loc>https://epiverse-trace.github.io/etstats/index.html</loc>
-    <lastmod>2026-02-11T11:53:33.086Z</lastmod>
-  </url>
-  <url>
     <loc>https://epiverse-trace.github.io/etstats/CONTRIBUTING.html</loc>
-    <lastmod>2026-02-11T11:53:33.055Z</lastmod>
-  </url>
-  <url>
-    <loc>https://epiverse-trace.github.io/etstats/citations.html</loc>
-    <lastmod>2026-02-11T11:53:33.078Z</lastmod>
+    <lastmod>2026-04-09T08:02:41.206Z</lastmod>
   </url>
   <url>
     <loc>https://epiverse-trace.github.io/etstats/LICENSE.html</loc>
-    <lastmod>2026-02-11T11:53:33.055Z</lastmod>
+    <lastmod>2026-04-09T08:02:41.206Z</lastmod>
+  </url>
+  <url>
+    <loc>https://epiverse-trace.github.io/etstats/citations.html</loc>
+    <lastmod>2026-04-09T08:02:41.227Z</lastmod>
   </url>
   <url>
     <loc>https://epiverse-trace.github.io/etstats/contributions_dashboard.html</loc>
-    <lastmod>2026-02-11T11:53:33.078Z</lastmod>
+    <lastmod>2026-04-09T08:02:41.227Z</lastmod>
+  </url>
+  <url>
+    <loc>https://epiverse-trace.github.io/etstats/index.html</loc>
+    <lastmod>2026-04-09T08:02:41.234Z</lastmod>
+  </url>
+  <url>
+    <loc>https://epiverse-trace.github.io/etstats/github-statistics.html</loc>
+    <lastmod>2026-04-09T08:02:41.234Z</lastmod>
   </url>
 </urlset>
